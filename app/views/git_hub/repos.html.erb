@@ -1,0 +1,10 @@
+
+<div class="panel panel-primary panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Repositories</h3>
+  </div>
+     <% @repositorios.each do |repositorio| %>
+          <%= link_to repositorio[:nombre], git_hub_repoTree_path(:repoNombre => repositorio[:nombre]), :class => "li list-group-item"%>
+      <%end%>
+</div>
+

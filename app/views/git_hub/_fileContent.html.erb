@@ -1,0 +1,48 @@
+<%= form_tag({controller: "git_hub", action: "submitForm", format: "xml"}, method: "post") do %>
+  <div class="panel panel-primary panel-default">
+  <div class="panel-heading">
+    <div class="row">
+      <div class="col-md-6">
+        <%=  @fileName %>
+      </div>
+      <div class="col-md-6">
+        <p class="text-right"> Select entire file <%= check_box_tag 'entiredFile',nil, false,:id => "check_all" %></p>
+      </div>
+    </div>
+  </div>
+  <div class="panel-body">
+    <%= hidden_field_tag 'fileName', @fileName%>
+    <table class="table table-hover borderless table-condensed">
+      <tbody>
+      <% cont=0%>
+      <%= hidden_field_tag 'fileContent', @contenido%>
+        <% @contenido.each_line do |line| %>
+          <tr>
+            <td style="border-top:0px;"><%= cont=cont+1 %></td>
+            <td style="white-space: pre-wrap; border-top:0px;"><%= line%></td>
+            <td style="border-top:0px;">
+              <%= hidden_field_tag 'lines[][numero]', cont%>
+              <%= check_box_tag 'lines[][contenido]', line, false,{:id => cont, :class=> "checkboxLine"} %>
+            </td>
+          </tr>
+        <%end%>
+      </tbody>
+ </table>
+    <%= submit_tag("Export selected lines", :class=>'btn btn-primary') %>
+    </div>
+    </div>
+<% end %>
+<script>
+    $(document).ready(function(){
+        $('#check_all').on("click", function(){// grouping all the checkbox using the classname
+            var checkboxes = $(".checkboxLine");
+            // check whether checkboxes are selected.
+            if(checkboxes.prop("checked")){
+                // if they are selected, unchecking all the checkbox
+                checkboxes.prop("checked",false);
+            } else {
+                // if they are not selected, checking all the checkbox
+                checkboxes.prop("checked",true);
+            }});
+    });
+</script>

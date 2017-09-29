@@ -1,0 +1,13 @@
+
+<%if !@fileSelected%>
+  <div class="panel panel-primary panel-default">
+    <div class="panel-heading">
+      <%= @currentRepo %>
+    </div>
+    <div class="panel-body">
+      <%= render :partial => 'treeContent' %>
+    </div>
+  </div>
+<%else%>
+    <%= render :partial => 'fileContent' %>
+<%end%>

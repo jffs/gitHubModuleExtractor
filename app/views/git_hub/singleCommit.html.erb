@@ -1,0 +1,51 @@
+<%= form_tag({controller: "git_hub", action: "submitForm"}, method: "post") do %>
+<% @files.each do |file| %>
+ <div class="panel panel-primary panel-default">
+   <div class="panel-heading">
+     <td>Archivo: <%= file[:name]%> </td>
+     <td class="success">Adiciones: <%= file[:additions]%></td>
+     <td class="danger">Eliminaciones: <%= file[:deletions]%></td>
+     <%= hidden_field_tag 'commit[file][][name]', file[:name]%>
+   </div>
+   <div class="panel-body">
+    <table class="table  table-hover table-condensed">
+      <tbody>
+
+        <% file[:patch].body.each_line do |line| %>
+        <tr>
+          <% if line[0]=='@' %>
+            <td class="info"><%=line%></td>
+          <%else%>
+            <% if line[0]=='+' %>
+              <%#Hago un mapping con el arreglo de lineas para obtener los datos de la misma%>
+              <% addedLine =@lines[file[:name]].detect { |item| item.content == line } %>
+              <%# numero de linea dentro del archivo original%>
+              <% addedLine.number%>
+              <%# numero de linea referente al patch%>
+              <% addedLine.patch_position%>
+              <td class="success" style="white-space: pre-wrap"><%=line%></td>
+              <td>
+                <%= check_box_tag 'commit[file][][][lines][]', addedLine.number %>
+                </td>
+            <%else%>
+              <% if line[0]=='-' %>
+                <td class="danger" style="white-space: pre-wrap"><%=line%></td>
+              <%else%>
+                <td class="active"><%=line%></td>
+              <%end%>
+            <%end%>
+          <%end%>
+        </tr>
+        <%end%> <%#del each line%>
+      </tbody>
+    </table>
+   </div>
+ </div>
+<% end %><%#del each file%>
+
+  <%= submit_tag("Enviar") %>
+
+  <%end%><%#del form%>
+
+
+

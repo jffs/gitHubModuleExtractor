@@ -1,0 +1,639 @@
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 18:44:47 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (3.9ms)
+Completed 200 OK in 63ms (Views: 21.2ms)
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-09-24 18:44:52 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 757ms (Views: 753.2ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for 127.0.0.1 at 2017-09-24 18:44:52 -0300
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for 127.0.0.1 at 2017-09-24 18:44:52 -0300
+
+
+Started GET "/assets/bootstrap_and_overrides.self-9b692ec76c0436a8d02d247efcf622b2af16f8f942bbba5a688b9339c463b1dd.css?body=1" for 127.0.0.1 at 2017-09-24 18:44:52 -0300
+
+
+Started GET "/assets/application.self-98cf8b921d735662ff29abffd752835e67fa08af0765581a78f871251f268794.css?body=1" for 127.0.0.1 at 2017-09-24 18:44:52 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-09-24 18:44:52 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-09-24 18:44:52 -0300
+
+
+Started GET "/assets/git_hub.self-a09ee3d4fca1daf56d0978796e1c260a819dd090778ca88b52761efd700b5732.css?body=1" for 127.0.0.1 at 2017-09-24 18:44:52 -0300
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for 127.0.0.1 at 2017-09-24 18:44:52 -0300
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2017-09-24 18:44:53 -0300
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2017-09-24 18:44:53 -0300
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2017-09-24 18:44:53 -0300
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2017-09-24 18:44:53 -0300
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2017-09-24 18:44:53 -0300
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2017-09-24 18:44:53 -0300
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2017-09-24 18:44:53 -0300
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2017-09-24 18:44:53 -0300
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2017-09-24 18:44:53 -0300
+
+
+Started GET "/assets/twitter/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2017-09-24 18:44:53 -0300
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2017-09-24 18:44:53 -0300
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2017-09-24 18:44:53 -0300
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2017-09-24 18:44:53 -0300
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-09-24 18:44:53 -0300
+
+
+Started GET "/assets/git_hub.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-09-24 18:44:53 -0300
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 127.0.0.1 at 2017-09-24 18:44:53 -0300
+
+
+Started GET "/assets/github-octocat.png" for 127.0.0.1 at 2017-09-24 18:44:53 -0300
+
+
+Started GET "/assets/fontawesome-webfont-a7c7e4930090e038a280fd61d88f0dc03dad4aeaedbd8c9be3dd9aa4c3b6f8d1.woff" for 127.0.0.1 at 2017-09-24 18:44:53 -0300
+
+
+Started POST "/git_hub/sign_in" for 127.0.0.1 at 2017-09-24 18:45:07 -0300
+Processing by GitHubController#sign_in as HTML
+  Parameters: {"user"=>"jffs", "password"=>"[FILTERED]"}
+Redirected to http://0.0.0.0:3000/git_hub/repos
+Completed 302 Found in 2ms
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-09-24 18:45:07 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 1045ms (Views: 81.7ms)
+
+
+Started GET "/git_hub/repoTree?repoNombre=bastonInteligenteTII" for 127.0.0.1 at 2017-09-24 18:45:14 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"repoNombre"=>"bastonInteligenteTII"}
+  Rendered git_hub/_treeContent.html.erb (3.1ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 971ms (Views: 138.1ms)
+
+
+Started GET "/git_hub/sign_out" for 127.0.0.1 at 2017-09-24 18:45:18 -0300
+Processing by GitHubController#sign_out as HTML
+Redirected to http://0.0.0.0:3000/git_hub/auth
+Completed 302 Found in 8ms
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-09-24 18:45:18 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 117ms (Views: 115.5ms)
+
+
+Started GET "/assets/github-octocat.png" for 127.0.0.1 at 2017-09-24 18:45:18 -0300
+
+
+Started GET "/" for ::1 at 2017-09-24 18:47:57 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (2.6ms)
+Completed 200 OK in 26ms (Views: 11.2ms)
+
+
+Started GET "/git_hub/auth" for ::1 at 2017-09-24 18:48:01 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 567ms (Views: 564.1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for ::1 at 2017-09-24 18:48:02 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-09-24 18:48:02 -0300
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for ::1 at 2017-09-24 18:48:02 -0300
+
+
+Started GET "/assets/git_hub.self-a09ee3d4fca1daf56d0978796e1c260a819dd090778ca88b52761efd700b5732.css?body=1" for ::1 at 2017-09-24 18:48:02 -0300
+
+
+Started GET "/assets/bootstrap_and_overrides.self-9b692ec76c0436a8d02d247efcf622b2af16f8f942bbba5a688b9339c463b1dd.css?body=1" for ::1 at 2017-09-24 18:48:02 -0300
+
+
+Started GET "/assets/application.self-98cf8b921d735662ff29abffd752835e67fa08af0765581a78f871251f268794.css?body=1" for ::1 at 2017-09-24 18:48:02 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-09-24 18:48:02 -0300
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for ::1 at 2017-09-24 18:48:02 -0300
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2017-09-24 18:48:02 -0300
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2017-09-24 18:48:02 -0300
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2017-09-24 18:48:02 -0300
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2017-09-24 18:48:02 -0300
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2017-09-24 18:48:02 -0300
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2017-09-24 18:48:02 -0300
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2017-09-24 18:48:02 -0300
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2017-09-24 18:48:02 -0300
+
+
+Started GET "/assets/twitter/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2017-09-24 18:48:02 -0300
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2017-09-24 18:48:02 -0300
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2017-09-24 18:48:02 -0300
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2017-09-24 18:48:02 -0300
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2017-09-24 18:48:02 -0300
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for ::1 at 2017-09-24 18:48:02 -0300
+
+
+Started GET "/assets/git_hub.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-09-24 18:48:02 -0300
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2017-09-24 18:48:02 -0300
+
+
+Started GET "/assets/github-octocat.png" for ::1 at 2017-09-24 18:48:02 -0300
+
+
+Started GET "/assets/fontawesome-webfont-a7c7e4930090e038a280fd61d88f0dc03dad4aeaedbd8c9be3dd9aa4c3b6f8d1.woff" for ::1 at 2017-09-24 18:48:02 -0300
+
+
+Started GET "/git_hub/auth" for ::1 at 2017-09-24 18:48:13 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 129ms (Views: 126.8ms)
+
+
+Started GET "/assets/github-octocat.png" for ::1 at 2017-09-24 18:48:13 -0300
+
+
+Started GET "/git_hub/auth" for ::1 at 2017-09-24 18:49:06 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 172ms (Views: 171.4ms)
+
+
+Started GET "/assets/git_hub.self-4f7e25e03b8fdab7b5771d6b6ae1e360f47d00193cc916c699d113490494abba.css?body=1" for ::1 at 2017-09-24 18:49:07 -0300
+
+
+Started GET "/assets/github-octocat.png" for ::1 at 2017-09-24 18:49:07 -0300
+
+
+Started GET "/git_hub/auth" for ::1 at 2017-09-24 18:50:00 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 180ms (Views: 179.5ms)
+
+
+Started GET "/assets/git_hub.self-ea53510ac443e9e3c1d000b6f20f38005e17a93cfbf3267f7122dc461a04a1ad.css?body=1" for ::1 at 2017-09-24 18:50:00 -0300
+
+
+Started GET "/assets/github-octocat.png" for ::1 at 2017-09-24 18:50:00 -0300
+
+
+Started POST "/git_hub/sign_in" for ::1 at 2017-09-24 18:50:02 -0300
+Processing by GitHubController#sign_in as HTML
+  Parameters: {"user"=>"jffs", "password"=>"[FILTERED]"}
+Redirected to http://localhost:3000/git_hub/repos
+Completed 302 Found in 3ms
+
+
+Started GET "/git_hub/repos" for ::1 at 2017-09-24 18:50:02 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 999ms (Views: 72.9ms)
+
+
+Started GET "/git_hub/repoTree?repoNombre=tallerIIG17" for ::1 at 2017-09-24 18:50:08 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"repoNombre"=>"tallerIIG17"}
+Completed 500 Internal Server Error in 911ms
+
+Github::Error::Conflict (GET https://api.github.com/repos/jffs/tallerIIG17/git/trees/master: 409 - Git Repository is empty.
+See: https://developer.github.com/v3):
+  app/services/git_hub_files_service.rb:9:in `getFilesfromSha'
+  app/services/git_hub_service.rb:62:in `getFilesfromSha'
+  app/controllers/git_hub_controller.rb:66:in `repoTree'
+
+
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.8ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (119.9ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (92.7ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (204.5ms)
+
+
+Started GET "/git_hub/repoTree?repoNombre=serverBlindApp" for ::1 at 2017-09-24 18:50:16 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"repoNombre"=>"serverBlindApp"}
+  Rendered git_hub/_treeContent.html.erb (6.8ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 1201ms (Views: 159.9ms)
+
+
+Started GET "/git_hub/repos" for ::1 at 2017-09-24 18:50:19 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 1088ms (Views: 129.1ms)
+
+
+Started GET "/git_hub/sign_out" for ::1 at 2017-09-24 18:50:52 -0300
+Processing by GitHubController#sign_out as HTML
+Redirected to http://localhost:3000/git_hub/auth
+Completed 302 Found in 5ms
+
+
+Started GET "/git_hub/auth" for ::1 at 2017-09-24 18:50:52 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 125ms (Views: 124.2ms)
+
+
+Started GET "/assets/github-octocat.png" for ::1 at 2017-09-24 18:50:53 -0300
+
+
+Started GET "/git_hub/auth" for ::1 at 2017-09-24 18:51:09 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 98ms (Views: 96.9ms)
+
+
+Started POST "/git_hub/sign_in" for ::1 at 2017-09-24 18:51:11 -0300
+Processing by GitHubController#sign_in as HTML
+  Parameters: {"user"=>"jffs", "password"=>"[FILTERED]"}
+Redirected to http://localhost:3000/git_hub/repos
+Completed 302 Found in 3ms
+
+
+Started GET "/git_hub/repos" for ::1 at 2017-09-24 18:51:11 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 910ms (Views: 75.9ms)
+
+
+Started GET "/git_hub/repos" for ::1 at 2017-09-24 18:51:15 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 898ms (Views: 122.3ms)
+
+
+Started GET "/git_hub/repoTree?repoNombre=repoParaRomper" for ::1 at 2017-09-24 18:51:28 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"repoNombre"=>"repoParaRomper"}
+  Rendered git_hub/_treeContent.html.erb (1.6ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 991ms (Views: 122.3ms)
+
+
+Started GET "/git_hub/repoTree?repoNombre=repoParaRomper" for ::1 at 2017-09-24 18:55:22 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"repoNombre"=>"repoParaRomper"}
+  Rendered git_hub/_treeContent.html.erb (1.4ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 994ms (Views: 145.4ms)
+
+
+Started GET "/git_hub/repos" for ::1 at 2017-09-24 18:56:50 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 965ms (Views: 126.6ms)
+
+
+Started GET "/git_hub/sign_out" for ::1 at 2017-09-24 18:56:53 -0300
+Processing by GitHubController#sign_out as HTML
+Redirected to http://localhost:3000/git_hub/auth
+Completed 302 Found in 5ms
+
+
+Started GET "/git_hub/auth" for ::1 at 2017-09-24 18:56:53 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 104ms (Views: 102.8ms)
+
+
+Started GET "/assets/github-octocat.png" for ::1 at 2017-09-24 18:56:53 -0300
+
+
+Started POST "/git_hub/sign_in" for ::1 at 2017-09-24 18:59:49 -0300
+Processing by GitHubController#sign_in as HTML
+  Parameters: {"user"=>"jffs", "password"=>"[FILTERED]"}
+Redirected to http://localhost:3000/git_hub/repos
+Completed 302 Found in 2ms
+
+
+Started GET "/git_hub/repos" for ::1 at 2017-09-24 18:59:49 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 1398ms (Views: 76.3ms)
+
+
+Started GET "/git_hub/repoTree?repoNombre=PulseApp" for ::1 at 2017-09-24 18:59:55 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"repoNombre"=>"PulseApp"}
+  Rendered git_hub/_treeContent.html.erb (0.6ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 1982ms (Views: 139.8ms)
+
+
+Started GET "/git_hub/repoTree?repoNombre=pruebaiaw" for ::1 at 2017-09-24 19:00:05 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"repoNombre"=>"pruebaiaw"}
+  Rendered git_hub/_treeContent.html.erb (0.6ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 1122ms (Views: 110.7ms)
+
+
+Started GET "/git_hub/repoTree?name=README2.md&sha=d465eb3c69d1b9a2706b4d7c7abdabbf96b33288&type=blob" for ::1 at 2017-09-24 19:00:07 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"name"=>"README2.md", "sha"=>"d465eb3c69d1b9a2706b4d7c7abdabbf96b33288", "type"=>"blob"}
+  Rendered git_hub/_fileContent.html.erb (3.6ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 965ms (Views: 126.4ms)
+
+
+Started GET "/git_hub/repoTree?repoNombre=repoParaRomper" for ::1 at 2017-09-24 19:00:15 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"repoNombre"=>"repoParaRomper"}
+  Rendered git_hub/_treeContent.html.erb (1.7ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 956ms (Views: 135.6ms)
+
+
+Started GET "/git_hub/repoTree?name=micro.c&sha=332ce54bff288dfc5995e90fa7f5b060042f8e4b&type=blob" for ::1 at 2017-09-24 19:00:17 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"name"=>"micro.c", "sha"=>"332ce54bff288dfc5995e90fa7f5b060042f8e4b", "type"=>"blob"}
+  Rendered git_hub/_fileContent.html.erb (56.2ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (59.9ms)
+Completed 200 OK in 1050ms (Views: 185.0ms)
+
+
+Started GET "/git_hub/repos" for ::1 at 2017-09-24 19:04:25 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 1041ms (Views: 113.8ms)
+
+
+Started GET "/git_hub/repoTree?repoNombre=serverBlindApp" for ::1 at 2017-09-24 19:05:04 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"repoNombre"=>"serverBlindApp"}
+  Rendered git_hub/_treeContent.html.erb (3.2ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 1387ms (Views: 78.5ms)
+
+
+Started GET "/git_hub/repoTree?name=Gemfile&sha=f66ba794c8fa5f516a92c6932c0b4e18cb683e52&type=blob" for ::1 at 2017-09-24 19:05:09 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"name"=>"Gemfile", "sha"=>"f66ba794c8fa5f516a92c6932c0b4e18cb683e52", "type"=>"blob"}
+  Rendered git_hub/_fileContent.html.erb (6.8ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 1246ms (Views: 97.7ms)
+
+
+Started POST "/git_hub/singleCommit.xml" for ::1 at 2017-09-24 19:05:14 -0300
+Processing by GitHubController#submitForm as XML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aM0lb89tPuzjwbBWhtr2W7Sh7ongQ7XS1+hztgNbuVz+zyoWxJjCbbXDLru069gi0MFji1Gyy0hHsItI2Et6uw==", "entiredFile"=>"on", "fileName"=>"Gemfile", "fileContent"=>"source 'https://rubygems.org'\r\n\r\n\r\n# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'\r\ngem 'rails', '4.2.4'\r\n# Use mysql as the database for Active Record\r\n\r\ngem 'pg'\r\n# Use SCSS for stylesheets\r\ngem 'sass-rails', '~> 5.0'\r\n# Use Uglifier as compressor for JavaScript assets\r\ngem 'uglifier', '>= 1.3.0'\r\n# Use CoffeeScript for .coffee assets and views\r\ngem 'coffee-rails', '~> 4.1.0'\r\n# See https://github.com/rails/execjs#readme for more supported runtimes\r\n# gem 'therubyracer', platforms: :ruby\r\ngem 'responders', '~> 2.0' \r\n# Use jquery as the JavaScript library\r\ngem 'jquery-rails'\r\n# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks\r\ngem 'turbolinks'\r\n# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder\r\ngem 'jbuilder', '~> 2.0'\r\n# bundle exec rake doc:rails generates the API under doc/api.\r\ngem 'sdoc', '~> 0.4.0', group: :doc\r\n\r\n# Use ActiveModel has_secure_password\r\n# gem 'bcrypt', '~> 3.1.7'\r\n\r\n# Use Unicorn as the app server\r\n# gem 'unicorn'\r\n\r\n# Use Capistrano for deployment\r\n# gem 'capistrano-rails', group: :development\r\ngem 'gmaps4rails'\r\ngem 'underscore-rails' \r\n\r\ngroup :development, :test do\r\n  # Call 'byebug' anywhere in the code to stop execution and get a debugger console\r\n  gem 'byebug'\r\nend\r\n\r\ngroup :development do\r\n  # Access an IRB console on exception pages or by using <%= console %> in views\r\n  gem 'web-console', '~> 2.0'\r\n\r\n  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring\r\n  gem 'spring'\r\nend\r\n\r\n", "lines"=>[{"numero"=>"1", "contenido"=>"source 'https://rubygems.org'\r\n"}, {"numero"=>"2", "contenido"=>"\r\n"}, {"numero"=>"3", "contenido"=>"\r\n"}, {"numero"=>"4", "contenido"=>"# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'\r\n"}, {"numero"=>"5", "contenido"=>"gem 'rails', '4.2.4'\r\n"}, {"numero"=>"6", "contenido"=>"# Use mysql as the database for Active Record\r\n"}, {"numero"=>"7", "contenido"=>"\r\n"}, {"numero"=>"8", "contenido"=>"gem 'pg'\r\n"}, {"numero"=>"9", "contenido"=>"# Use SCSS for stylesheets\r\n"}, {"numero"=>"10", "contenido"=>"gem 'sass-rails', '~> 5.0'\r\n"}, {"numero"=>"11", "contenido"=>"# Use Uglifier as compressor for JavaScript assets\r\n"}, {"numero"=>"12", "contenido"=>"gem 'uglifier', '>= 1.3.0'\r\n"}, {"numero"=>"13", "contenido"=>"# Use CoffeeScript for .coffee assets and views\r\n"}, {"numero"=>"14", "contenido"=>"gem 'coffee-rails', '~> 4.1.0'\r\n"}, {"numero"=>"15", "contenido"=>"# See https://github.com/rails/execjs#readme for more supported runtimes\r\n"}, {"numero"=>"16", "contenido"=>"# gem 'therubyracer', platforms: :ruby\r\n"}, {"numero"=>"17", "contenido"=>"gem 'responders', '~> 2.0' \r\n"}, {"numero"=>"18", "contenido"=>"# Use jquery as the JavaScript library\r\n"}, {"numero"=>"19", "contenido"=>"gem 'jquery-rails'\r\n"}, {"numero"=>"20", "contenido"=>"# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks\r\n"}, {"numero"=>"21", "contenido"=>"gem 'turbolinks'\r\n"}, {"numero"=>"22", "contenido"=>"# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder\r\n"}, {"numero"=>"23", "contenido"=>"gem 'jbuilder', '~> 2.0'\r\n"}, {"numero"=>"24", "contenido"=>"# bundle exec rake doc:rails generates the API under doc/api.\r\n"}, {"numero"=>"25", "contenido"=>"gem 'sdoc', '~> 0.4.0', group: :doc\r\n"}, {"numero"=>"26", "contenido"=>"\r\n"}, {"numero"=>"27", "contenido"=>"# Use ActiveModel has_secure_password\r\n"}, {"numero"=>"28", "contenido"=>"# gem 'bcrypt', '~> 3.1.7'\r\n"}, {"numero"=>"29", "contenido"=>"\r\n"}, {"numero"=>"30", "contenido"=>"# Use Unicorn as the app server\r\n"}, {"numero"=>"31", "contenido"=>"# gem 'unicorn'\r\n"}, {"numero"=>"32", "contenido"=>"\r\n"}, {"numero"=>"33", "contenido"=>"# Use Capistrano for deployment\r\n"}, {"numero"=>"34", "contenido"=>"# gem 'capistrano-rails', group: :development\r\n"}, {"numero"=>"35", "contenido"=>"gem 'gmaps4rails'\r\n"}, {"numero"=>"36", "contenido"=>"gem 'underscore-rails' \r\n"}, {"numero"=>"37", "contenido"=>"\r\n"}, {"numero"=>"38", "contenido"=>"group :development, :test do\r\n"}, {"numero"=>"39", "contenido"=>"  # Call 'byebug' anywhere in the code to stop execution and get a debugger console\r\n"}, {"numero"=>"40", "contenido"=>"  gem 'byebug'\r\n"}, {"numero"=>"41", "contenido"=>"end\r\n"}, {"numero"=>"42", "contenido"=>"\r\n"}, {"numero"=>"43", "contenido"=>"group :development do\r\n"}, {"numero"=>"44", "contenido"=>"  # Access an IRB console on exception pages or by using <%= console %> in views\r\n"}, {"numero"=>"45", "contenido"=>"  gem 'web-console', '~> 2.0'\r\n"}, {"numero"=>"46", "contenido"=>"\r\n"}, {"numero"=>"47", "contenido"=>"  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring\r\n"}, {"numero"=>"48", "contenido"=>"  gem 'spring'\r\n"}, {"numero"=>"49", "contenido"=>"end\r\n"}, {"numero"=>"50", "contenido"=>"\r\n"}], "commit"=>"Export selected lines"}
+Completed 500 Internal Server Error in 8ms
+
+NoMethodError (undefined method `setCurrentContentState' for FileToExport:Class):
+  app/services/file_to_export.rb:39:in `addFileIntoModule'
+  app/controllers/git_hub_controller.rb:51:in `submitForm'
+
+
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.4ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (106.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (83.8ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (181.8ms)
+
+
+Started POST "/git_hub/singleCommit.xml" for ::1 at 2017-09-24 19:05:59 -0300
+Processing by GitHubController#submitForm as XML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aM0lb89tPuzjwbBWhtr2W7Sh7ongQ7XS1+hztgNbuVz+zyoWxJjCbbXDLru069gi0MFji1Gyy0hHsItI2Et6uw==", "entiredFile"=>"on", "fileName"=>"Gemfile", "fileContent"=>"source 'https://rubygems.org'\r\n\r\n\r\n# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'\r\ngem 'rails', '4.2.4'\r\n# Use mysql as the database for Active Record\r\n\r\ngem 'pg'\r\n# Use SCSS for stylesheets\r\ngem 'sass-rails', '~> 5.0'\r\n# Use Uglifier as compressor for JavaScript assets\r\ngem 'uglifier', '>= 1.3.0'\r\n# Use CoffeeScript for .coffee assets and views\r\ngem 'coffee-rails', '~> 4.1.0'\r\n# See https://github.com/rails/execjs#readme for more supported runtimes\r\n# gem 'therubyracer', platforms: :ruby\r\ngem 'responders', '~> 2.0' \r\n# Use jquery as the JavaScript library\r\ngem 'jquery-rails'\r\n# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks\r\ngem 'turbolinks'\r\n# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder\r\ngem 'jbuilder', '~> 2.0'\r\n# bundle exec rake doc:rails generates the API under doc/api.\r\ngem 'sdoc', '~> 0.4.0', group: :doc\r\n\r\n# Use ActiveModel has_secure_password\r\n# gem 'bcrypt', '~> 3.1.7'\r\n\r\n# Use Unicorn as the app server\r\n# gem 'unicorn'\r\n\r\n# Use Capistrano for deployment\r\n# gem 'capistrano-rails', group: :development\r\ngem 'gmaps4rails'\r\ngem 'underscore-rails' \r\n\r\ngroup :development, :test do\r\n  # Call 'byebug' anywhere in the code to stop execution and get a debugger console\r\n  gem 'byebug'\r\nend\r\n\r\ngroup :development do\r\n  # Access an IRB console on exception pages or by using <%= console %> in views\r\n  gem 'web-console', '~> 2.0'\r\n\r\n  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring\r\n  gem 'spring'\r\nend\r\n\r\n", "lines"=>[{"numero"=>"1", "contenido"=>"source 'https://rubygems.org'\r\n"}, {"numero"=>"2", "contenido"=>"\r\n"}, {"numero"=>"3", "contenido"=>"\r\n"}, {"numero"=>"4", "contenido"=>"# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'\r\n"}, {"numero"=>"5", "contenido"=>"gem 'rails', '4.2.4'\r\n"}, {"numero"=>"6", "contenido"=>"# Use mysql as the database for Active Record\r\n"}, {"numero"=>"7", "contenido"=>"\r\n"}, {"numero"=>"8", "contenido"=>"gem 'pg'\r\n"}, {"numero"=>"9", "contenido"=>"# Use SCSS for stylesheets\r\n"}, {"numero"=>"10", "contenido"=>"gem 'sass-rails', '~> 5.0'\r\n"}, {"numero"=>"11", "contenido"=>"# Use Uglifier as compressor for JavaScript assets\r\n"}, {"numero"=>"12", "contenido"=>"gem 'uglifier', '>= 1.3.0'\r\n"}, {"numero"=>"13", "contenido"=>"# Use CoffeeScript for .coffee assets and views\r\n"}, {"numero"=>"14", "contenido"=>"gem 'coffee-rails', '~> 4.1.0'\r\n"}, {"numero"=>"15", "contenido"=>"# See https://github.com/rails/execjs#readme for more supported runtimes\r\n"}, {"numero"=>"16", "contenido"=>"# gem 'therubyracer', platforms: :ruby\r\n"}, {"numero"=>"17", "contenido"=>"gem 'responders', '~> 2.0' \r\n"}, {"numero"=>"18", "contenido"=>"# Use jquery as the JavaScript library\r\n"}, {"numero"=>"19", "contenido"=>"gem 'jquery-rails'\r\n"}, {"numero"=>"20", "contenido"=>"# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks\r\n"}, {"numero"=>"21", "contenido"=>"gem 'turbolinks'\r\n"}, {"numero"=>"22", "contenido"=>"# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder\r\n"}, {"numero"=>"23", "contenido"=>"gem 'jbuilder', '~> 2.0'\r\n"}, {"numero"=>"24", "contenido"=>"# bundle exec rake doc:rails generates the API under doc/api.\r\n"}, {"numero"=>"25", "contenido"=>"gem 'sdoc', '~> 0.4.0', group: :doc\r\n"}, {"numero"=>"26", "contenido"=>"\r\n"}, {"numero"=>"27", "contenido"=>"# Use ActiveModel has_secure_password\r\n"}, {"numero"=>"28", "contenido"=>"# gem 'bcrypt', '~> 3.1.7'\r\n"}, {"numero"=>"29", "contenido"=>"\r\n"}, {"numero"=>"30", "contenido"=>"# Use Unicorn as the app server\r\n"}, {"numero"=>"31", "contenido"=>"# gem 'unicorn'\r\n"}, {"numero"=>"32", "contenido"=>"\r\n"}, {"numero"=>"33", "contenido"=>"# Use Capistrano for deployment\r\n"}, {"numero"=>"34", "contenido"=>"# gem 'capistrano-rails', group: :development\r\n"}, {"numero"=>"35", "contenido"=>"gem 'gmaps4rails'\r\n"}, {"numero"=>"36", "contenido"=>"gem 'underscore-rails' \r\n"}, {"numero"=>"37", "contenido"=>"\r\n"}, {"numero"=>"38", "contenido"=>"group :development, :test do\r\n"}, {"numero"=>"39", "contenido"=>"  # Call 'byebug' anywhere in the code to stop execution and get a debugger console\r\n"}, {"numero"=>"40", "contenido"=>"  gem 'byebug'\r\n"}, {"numero"=>"41", "contenido"=>"end\r\n"}, {"numero"=>"42", "contenido"=>"\r\n"}, {"numero"=>"43", "contenido"=>"group :development do\r\n"}, {"numero"=>"44", "contenido"=>"  # Access an IRB console on exception pages or by using <%= console %> in views\r\n"}, {"numero"=>"45", "contenido"=>"  gem 'web-console', '~> 2.0'\r\n"}, {"numero"=>"46", "contenido"=>"\r\n"}, {"numero"=>"47", "contenido"=>"  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring\r\n"}, {"numero"=>"48", "contenido"=>"  gem 'spring'\r\n"}, {"numero"=>"49", "contenido"=>"end\r\n"}, {"numero"=>"50", "contenido"=>"\r\n"}], "commit"=>"Export selected lines"}
+  Rendered git_hub/submitForm.xml.builder (6.4ms)
+Completed 200 OK in 28ms (Views: 19.7ms)
+
+
+Started GET "/git_hub/repoTree?name=Gemfile&sha=f66ba794c8fa5f516a92c6932c0b4e18cb683e52&type=blob" for ::1 at 2017-09-24 19:06:42 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"name"=>"Gemfile", "sha"=>"f66ba794c8fa5f516a92c6932c0b4e18cb683e52", "type"=>"blob"}
+  Rendered git_hub/_fileContent.html.erb (13.3ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 1042ms (Views: 148.9ms)
+
+
+Started GET "/" for ::1 at 2017-09-29 16:56:59 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (4.2ms)
+Completed 200 OK in 35ms (Views: 20.7ms)
+
+
+Started GET "/git_hub/auth" for ::1 at 2017-09-29 16:57:02 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 729ms (Views: 721.1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for ::1 at 2017-09-29 16:57:03 -0300
+
+
+Started GET "/assets/bootstrap_and_overrides.self-9b692ec76c0436a8d02d247efcf622b2af16f8f942bbba5a688b9339c463b1dd.css?body=1" for ::1 at 2017-09-29 16:57:03 -0300
+
+
+Started GET "/assets/git_hub.self-ea53510ac443e9e3c1d000b6f20f38005e17a93cfbf3267f7122dc461a04a1ad.css?body=1" for ::1 at 2017-09-29 16:57:03 -0300
+
+
+Started GET "/assets/application.self-98cf8b921d735662ff29abffd752835e67fa08af0765581a78f871251f268794.css?body=1" for ::1 at 2017-09-29 16:57:03 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-09-29 16:57:03 -0300
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2017-09-29 16:57:03 -0300
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for ::1 at 2017-09-29 16:57:03 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-09-29 16:57:03 -0300
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2017-09-29 16:57:03 -0300
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2017-09-29 16:57:03 -0300
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for ::1 at 2017-09-29 16:57:03 -0300
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2017-09-29 16:57:03 -0300
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2017-09-29 16:57:03 -0300
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2017-09-29 16:57:03 -0300
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2017-09-29 16:57:03 -0300
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2017-09-29 16:57:03 -0300
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2017-09-29 16:57:03 -0300
+
+
+Started GET "/assets/twitter/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2017-09-29 16:57:03 -0300
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2017-09-29 16:57:03 -0300
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2017-09-29 16:57:03 -0300
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2017-09-29 16:57:03 -0300
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for ::1 at 2017-09-29 16:57:03 -0300
+
+
+Started GET "/assets/git_hub.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-09-29 16:57:03 -0300
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2017-09-29 16:57:03 -0300
+
+
+Started GET "/assets/github-octocat.png" for ::1 at 2017-09-29 16:57:03 -0300
+
+
+Started GET "/assets/fontawesome-webfont-a7c7e4930090e038a280fd61d88f0dc03dad4aeaedbd8c9be3dd9aa4c3b6f8d1.woff" for ::1 at 2017-09-29 16:57:03 -0300
+
+
+Started GET "/git_hub/sign_out" for ::1 at 2017-09-29 16:57:11 -0300
+Processing by GitHubController#sign_out as HTML
+Redirected to http://localhost:3000/git_hub/auth
+Completed 302 Found in 9ms
+
+
+Started GET "/git_hub/auth" for ::1 at 2017-09-29 16:57:11 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 75ms (Views: 73.9ms)
+
+
+Started POST "/git_hub/sign_in" for ::1 at 2017-09-29 16:57:18 -0300
+Processing by GitHubController#sign_in as HTML
+  Parameters: {"user"=>"jffs", "password"=>"[FILTERED]"}
+Redirected to http://localhost:3000/git_hub/repos
+Completed 302 Found in 3ms
+
+
+Started GET "/git_hub/repos" for ::1 at 2017-09-29 16:57:18 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 1543ms (Views: 91.4ms)
+
+
+Started GET "/git_hub/repoTree?repoNombre=pruebaiaw" for ::1 at 2017-09-29 16:57:22 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"repoNombre"=>"pruebaiaw"}
+  Rendered git_hub/_treeContent.html.erb (1.4ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 1428ms (Views: 106.3ms)
+
+
+Started GET "/git_hub/repoTree?repoNombre=gitHubModuleExtractor" for ::1 at 2017-09-29 16:57:26 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"repoNombre"=>"gitHubModuleExtractor"}
+  Rendered git_hub/_treeContent.html.erb (0.3ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 1407ms (Views: 95.1ms)
+
+
+Started GET "/git_hub/sign_out" for ::1 at 2017-09-29 16:57:31 -0300
+Processing by GitHubController#sign_out as HTML
+Redirected to http://localhost:3000/git_hub/auth
+Completed 302 Found in 3ms
+
+
+Started GET "/git_hub/auth" for ::1 at 2017-09-29 16:57:31 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 81ms (Views: 80.3ms)
+
+
+Started GET "/assets/github-octocat.png" for ::1 at 2017-09-29 16:57:31 -0300

@@ -1,0 +1,8 @@
+<h1>Commits</h1>
+
+<div class="list-group">
+	<% @commits.each do |commit| %>
+		<%= commit[:fecha]%>
+		<%= link_to commit[:mensaje], git_hub_singleCommit_path(:sha => commit[:sha]), :class => "list-group-item"%>
+  <%end%>
+</div>

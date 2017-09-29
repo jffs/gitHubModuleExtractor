@@ -1,0 +1,15 @@
+<table class="table table-hover table-condensed">
+  <tbody>
+  <% @repoTree.each do |file| -%>
+      <tr>
+        <td>
+          <%if file[:type]=='tree' %>
+              <i class="fa fa-folder" aria-hidden="true"></i>
+          <%else%>
+              <i class="fa fa-file-text-o" aria-hidden="true"></i>
+          <%end%>
+          <%= link_to file[:text], git_hub_repoTree_path(:sha=>file[:sha], :type =>file[:type], :name=>file[:text]) %></td>
+      </tr>
+  <%end%>
+  </tbody>
+</table>
