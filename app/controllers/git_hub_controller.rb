@@ -3,13 +3,13 @@ require 'json'
 require 'builder'
 class GitHubController < ApplicationController
  skip_before_action :verify_authenticity_token
- before_action :gitSession
+ before_action :gitSession, :except => [:auth, :sign_in]
 
   def auth
     if !GitHubService.getCurrentGitSession.nil?
       redirect_to git_hub_repos_path
     end
-   end
+  end
   def sign_in
       if params[:user].blank? or params[:password].blank?
         redirect_to git_hub_auth_path, alert: "Neither username nor password can't be blank"
@@ -36,19 +36,20 @@ class GitHubController < ApplicationController
          end
       end
   end
- def sign_out
-   GitHubService.sign_out
-   respond_to do |format|
-     format.html { redirect_to git_hub_auth_path}
-   end
- end
+  def sign_out
+    GitHubService.sign_out
+    respond_to do |format|
+      format.html { redirect_to git_hub_auth_path}
+    end
+  end
   def commits
     repositorio= params[:repoNombre]
     @commits= GitHubService.getCommitsData(repositorio)
   end 
   def repos
-   @repositorios= GitHubService.getRepositorios
-  end
+
+      @repositorios= GitHubService.getRepositorios
+    end
   def singleCommit
     @files = GitHubService.getCommitedFiles(params[:sha])
     @lines = GitHubService.getAddedLines(@files)
@@ -88,6 +89,8 @@ def gitSession
   @gitSession= GitHubService.getCurrentGitSession
   if !@gitSession.nil?
     @currentUser=GitHubService.getCurrentUser
+  else
+    redirect_to git_hub_auth_path, alert: 'You must be signed in to access this page'
   end
 end
   def exportFiles
