@@ -6,6 +6,9 @@ class GitHubController < ApplicationController
  before_action :gitSession
 
   def auth
+    if !GitHubService.getCurrentGitSession.nil?
+      redirect_to git_hub_repos_path
+    end
    end
   def sign_in
         @usuario=params[:user]
@@ -48,7 +51,7 @@ class GitHubController < ApplicationController
   end
   def submitForm
 
-    FileToExport.addFileIntoModule(params[:fileName],params[:entiredFile], params[:lines])
+    FileToExport.addFileIntoModule(params[:fileName],params[:fileSha],params[:entiredFile], params[:lines])
     @files=FileToExport.getComponentToExport
     #xml = Builder::XmlMarkup.new(:target=>$stdout, :indent=>2)
     #respond_to do |format|
@@ -70,6 +73,7 @@ class GitHubController < ApplicationController
       else
         @fileName=params[:name]
         @fileSelected=true
+        @fileSha=params[:sha]
         @contenido=GitHubService.getFileContent(params[:sha])
 
       end
@@ -82,4 +86,10 @@ def gitSession
     @currentUser=GitHubService.getCurrentUser
   end
 end
+  def exportFiles
+    recursive_tree= GitHubRepositorioService.getRecursiveTree('master')
+    filesToExport= FileToExport.getComponentToExport
+    GitHubService.updateFiles(filesToExport, recursive_tree)
+    redirect_to git_hub_repos_path
+  end
 end

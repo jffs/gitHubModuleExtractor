@@ -18,4 +18,12 @@ class GitHubRepositorioService
     @repo = store.transaction { store.fetch(:current_repoName, nil) }
     return @repo
   end
+  def self.getRecursiveTree(sha)
+    tree ={}
+    github=GitHubService.getCurrentGitSession
+    github.git_data.trees.get GitHubService.getCurrentUser, self.getCurrentRepo, sha, recursive: true do |file|
+      tree[file.sha]=file.path
+    end
+    return tree
+  end
 end

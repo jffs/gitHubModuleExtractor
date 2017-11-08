@@ -90,4 +90,10 @@ class GitHubService
   def self.getAddedLines(files)
     return GitHubCommitService.getAddedLines(files)
   end
+  def self.getGitContent
+    return Github::Client::Repos::Contents.new(login: GitHubService.getCurrentUser, password: GitHubService.getCurrentGitSession.password)
+  end
+  def self.updateFiles(storeFiles,tree)
+    GitHubFilesService.updateFiles(self.getGitContent,storeFiles,tree)
+  end
 end

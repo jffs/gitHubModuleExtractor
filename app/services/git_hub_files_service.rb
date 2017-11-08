@@ -17,4 +17,21 @@ class GitHubFilesService
     end
     return array_files
   end
+  def self.updateFiles(contents,stored_files,recursive_tree)
+
+    stored_files.each do |file|
+      full_path=recursive_tree[file.sha]
+      file_contentData = contents.find(GitHubService.getCurrentUser,GitHubRepositorioService.getCurrentRepo, full_path)
+
+      lines = Base64.decode64(file_contentData.content).lines
+      #Busco las lineas del archivo original, usando el numero en las lineas del archivo guardado
+      file.lines.each do |line|
+        if !line[:contenido].nil?
+          lines[line[:numero].to_i-1].replace("")
+        end
+      end
+      modifiedFile = lines.join("")
+      contents.update(GitHubService.getCurrentUser,GitHubRepositorioService.getCurrentRepo,file_contentData.name, path: full_path, content: modifiedFile , message: "commit" , sha: file_contentData.sha)
+    end
+  end
 end
