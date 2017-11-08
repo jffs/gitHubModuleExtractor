@@ -6081,3 +6081,866 @@ Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-07 13:30:46 -0300
 Processing by GitHubController#repos as HTML
   Rendered git_hub/repos.html.erb within layouts/application (6.1ms)
 Completed 200 OK in 1414ms (Views: 97.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-08 16:52:31 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (4.3ms)
+Completed 200 OK in 56ms (Views: 34.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-08 16:52:42 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 4ms (Views: 3.9ms)
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-08 16:52:43 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 3930ms (Views: 770.0ms)
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-08 16:52:47 -0300
+Processing by GitHubController#auth as HTML
+Redirected to http://0.0.0.0:3000/git_hub/repos
+Completed 302 Found in 8ms
+
+
+Started GET "/git_hub/repoTree?repoNombre=repoParaRomper" for 127.0.0.1 at 2017-11-08 16:52:47 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"repoNombre"=>"repoParaRomper"}
+  Rendered git_hub/_treeContent.html.erb (2.7ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 2030ms (Views: 101.7ms)
+
+
+Started GET "/git_hub/repoTree?name=Eje8.cs&sha=8da2fcf681d555352a3d439ba6fb3352ae34390e&type=blob" for 127.0.0.1 at 2017-11-08 16:52:49 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"name"=>"Eje8.cs", "sha"=>"8da2fcf681d555352a3d439ba6fb3352ae34390e", "type"=>"blob"}
+  Rendered git_hub/_fileContent.html.erb (7.8ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 1986ms (Views: 111.0ms)
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-08 16:52:51 -0300
+Processing by GitHubController#auth as HTML
+Redirected to http://0.0.0.0:3000/git_hub/repos
+Completed 302 Found in 4ms
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-08 16:52:51 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 1831ms (Views: 84.7ms)
+
+
+Started GET "/git_hub/sign_out" for 127.0.0.1 at 2017-11-08 16:52:57 -0300
+Processing by GitHubController#sign_out as HTML
+Redirected to http://0.0.0.0:3000/git_hub/auth
+Completed 302 Found in 7ms
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-08 16:52:57 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 110ms (Views: 109.0ms)
+
+
+Started GET "/assets/github-octocat.png" for 127.0.0.1 at 2017-11-08 16:52:57 -0300
+
+
+Started POST "/git_hub/sign_in" for 127.0.0.1 at 2017-11-08 16:53:02 -0300
+Processing by GitHubController#sign_in as HTML
+  Parameters: {"user"=>"jffs", "password"=>"[FILTERED]"}
+Redirected to http://0.0.0.0:3000/git_hub/repos
+Completed 302 Found in 2ms
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-08 16:53:02 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 1335ms (Views: 71.8ms)
+
+
+Started GET "/git_hub/sign_out" for 127.0.0.1 at 2017-11-08 16:53:07 -0300
+Processing by GitHubController#sign_out as HTML
+Redirected to http://0.0.0.0:3000/git_hub/auth
+Completed 302 Found in 11ms
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-08 16:53:07 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 101ms (Views: 100.1ms)
+
+
+Started GET "/assets/github-octocat.png" for 127.0.0.1 at 2017-11-08 16:53:07 -0300
+
+
+Started POST "/git_hub/sign_in" for 127.0.0.1 at 2017-11-08 16:53:10 -0300
+Processing by GitHubController#sign_in as HTML
+  Parameters: {"user"=>"", "password"=>"[FILTERED]"}
+Redirected to http://0.0.0.0:3000/git_hub/repos
+Completed 302 Found in 3ms
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-08 16:53:10 -0300
+Processing by GitHubController#repos as HTML
+Completed 500 Internal Server Error in 1072ms
+
+NoMethodError (undefined method `name' for ["login", "repos"]:Array):
+  app/services/git_hub_repositorio_service.rb:6:in `block in getRepositorios'
+  app/services/git_hub_repositorio_service.rb:5:in `each'
+  app/services/git_hub_repositorio_service.rb:5:in `getRepositorios'
+  app/services/git_hub_service.rb:71:in `getRepositorios'
+  app/controllers/git_hub_controller.rb:46:in `repos'
+
+
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.3ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (164.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (142.9ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (287.5ms)
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-08 16:59:49 -0300
+Processing by GitHubController#repos as HTML
+Completed 500 Internal Server Error in 1107ms
+
+NoMethodError (undefined method `name' for ["login", "repos"]:Array):
+  app/services/git_hub_repositorio_service.rb:6:in `block in getRepositorios'
+  app/services/git_hub_repositorio_service.rb:5:in `each'
+  app/services/git_hub_repositorio_service.rb:5:in `getRepositorios'
+  app/services/git_hub_service.rb:71:in `getRepositorios'
+  app/controllers/git_hub_controller.rb:50:in `repos'
+
+
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.0ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (137.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (111.7ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (244.7ms)
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-08 17:01:13 -0300
+Processing by GitHubController#repos as HTML
+Completed 500 Internal Server Error in 1439ms
+
+NoMethodError (undefined method `name' for ["login", "repos"]:Array):
+  app/services/git_hub_repositorio_service.rb:6:in `block in getRepositorios'
+  app/services/git_hub_repositorio_service.rb:5:in `each'
+  app/services/git_hub_repositorio_service.rb:5:in `getRepositorios'
+  app/services/git_hub_service.rb:71:in `getRepositorios'
+  app/controllers/git_hub_controller.rb:50:in `repos'
+
+
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.0ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (165.9ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (115.6ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (247.0ms)
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-08 17:01:15 -0300
+Processing by GitHubController#auth as HTML
+Redirected to http://0.0.0.0:3000/git_hub/repos
+Completed 302 Found in 2ms
+
+
+Started GET "/git_hub/repoTree?repoNombre=repoParaRomper" for 127.0.0.1 at 2017-11-08 17:01:15 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"repoNombre"=>"repoParaRomper"}
+Completed 500 Internal Server Error in 1191ms
+
+Github::Error::Unauthorized (GET https://api.github.com/repos/repoParaRomper/git/trees/master: 401 - Bad credentials
+See: https://developer.github.com/v3):
+  app/services/git_hub_files_service.rb:9:in `getFilesfromSha'
+  app/services/git_hub_service.rb:62:in `getFilesfromSha'
+  app/controllers/git_hub_controller.rb:73:in `repoTree'
+
+
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (17.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (126.1ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (100.9ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (222.4ms)
+
+
+Started GET "/git_hub/repoTree?name=Eje8.cs&sha=8da2fcf681d555352a3d439ba6fb3352ae34390e&type=blob" for 127.0.0.1 at 2017-11-08 17:01:17 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"name"=>"Eje8.cs", "sha"=>"8da2fcf681d555352a3d439ba6fb3352ae34390e", "type"=>"blob"}
+Completed 500 Internal Server Error in 867ms
+
+Github::Error::Unauthorized (GET https://api.github.com/repos/repoParaRomper/git/blobs/8da2fcf681d555352a3d439ba6fb3352ae34390e: 401 - Bad credentials
+See: https://developer.github.com/v3):
+  app/services/git_hub_files_service.rb:3:in `getFileContent'
+  app/services/git_hub_service.rb:54:in `getFileContent'
+  app/controllers/git_hub_controller.rb:81:in `repoTree'
+
+
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.9ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (139.9ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (189.9ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (464.9ms)
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-08 17:01:19 -0300
+Processing by GitHubController#auth as HTML
+Redirected to http://0.0.0.0:3000/git_hub/repos
+Completed 302 Found in 3ms
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-08 17:01:19 -0300
+Processing by GitHubController#repos as HTML
+Completed 500 Internal Server Error in 867ms
+
+NoMethodError (undefined method `name' for ["login", "repos"]:Array):
+  app/services/git_hub_repositorio_service.rb:6:in `block in getRepositorios'
+  app/services/git_hub_repositorio_service.rb:5:in `each'
+  app/services/git_hub_repositorio_service.rb:5:in `getRepositorios'
+  app/services/git_hub_service.rb:71:in `getRepositorios'
+  app/controllers/git_hub_controller.rb:50:in `repos'
+
+
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.9ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (113.4ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (100.2ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (228.1ms)
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-08 17:01:25 -0300
+Processing by GitHubController#repos as HTML
+Completed 500 Internal Server Error in 990ms
+
+NoMethodError (undefined method `name' for ["login", "repos"]:Array):
+  app/services/git_hub_repositorio_service.rb:6:in `block in getRepositorios'
+  app/services/git_hub_repositorio_service.rb:5:in `each'
+  app/services/git_hub_repositorio_service.rb:5:in `getRepositorios'
+  app/services/git_hub_service.rb:71:in `getRepositorios'
+  app/controllers/git_hub_controller.rb:50:in `repos'
+
+
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.2ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.6ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (119.4ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (102.1ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (223.2ms)
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-08 17:02:00 -0300
+Processing by GitHubController#repos as HTML
+Completed 500 Internal Server Error in 1383ms
+
+Github::Error::Unauthorized (GET https://api.github.com/user/repos: 401 - Requires authentication
+See: https://developer.github.com/v3/repos/#list-your-repositories):
+  app/services/git_hub_repositorio_service.rb:3:in `getRepositorios'
+  app/services/git_hub_service.rb:71:in `getRepositorios'
+  app/controllers/git_hub_controller.rb:50:in `repos'
+
+
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.3ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.6ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (184.9ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (126.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (269.8ms)
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-08 17:02:02 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 123ms (Views: 122.1ms)
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-08 17:02:02 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 146ms (Views: 144.6ms)
+
+
+Started GET "/assets/github-octocat.png" for 127.0.0.1 at 2017-11-08 17:02:02 -0300
+
+
+Started POST "/git_hub/sign_in" for 127.0.0.1 at 2017-11-08 17:02:04 -0300
+Processing by GitHubController#sign_in as HTML
+  Parameters: {"user"=>"", "password"=>"[FILTERED]"}
+Redirected to http://0.0.0.0:3000/git_hub/repos
+Completed 302 Found in 4ms
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-08 17:02:04 -0300
+Processing by GitHubController#repos as HTML
+Completed 500 Internal Server Error in 1112ms
+
+NoMethodError (undefined method `name' for ["login", "repos"]:Array):
+  app/services/git_hub_repositorio_service.rb:6:in `block in getRepositorios'
+  app/services/git_hub_repositorio_service.rb:5:in `each'
+  app/services/git_hub_repositorio_service.rb:5:in `getRepositorios'
+  app/services/git_hub_service.rb:71:in `getRepositorios'
+  app/controllers/git_hub_controller.rb:50:in `repos'
+
+
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (25.1ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.3ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (217.7ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.3ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.4ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (165.7ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (384.4ms)
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-08 17:02:25 -0300
+Processing by GitHubController#repos as HTML
+Completed 500 Internal Server Error in 982ms
+
+NoMethodError (undefined method `name' for ["login", "repos"]:Array):
+  app/services/git_hub_repositorio_service.rb:6:in `block in getRepositorios'
+  app/services/git_hub_repositorio_service.rb:5:in `each'
+  app/services/git_hub_repositorio_service.rb:5:in `getRepositorios'
+  app/services/git_hub_service.rb:71:in `getRepositorios'
+  app/controllers/git_hub_controller.rb:50:in `repos'
+
+
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (54.2ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.3ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (183.3ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.3ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.0ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (161.0ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.3ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (310.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-08 17:03:39 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (7.4ms)
+Completed 200 OK in 51ms (Views: 33.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-08 17:03:43 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (0.2ms)
+Completed 200 OK in 6ms (Views: 4.5ms)
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-08 17:03:44 -0300
+Processing by GitHubController#repos as HTML
+Completed 500 Internal Server Error in 1109ms
+
+Github::Error::Unauthorized (GET https://api.github.com/user/repos: 401 - Requires authentication
+See: https://developer.github.com/v3/repos/#list-your-repositories):
+  app/services/git_hub_repositorio_service.rb:3:in `getRepositorios'
+  app/services/git_hub_service.rb:71:in `getRepositorios'
+  app/controllers/git_hub_controller.rb:50:in `repos'
+
+
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (92.6ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (16.4ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (281.0ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (3.1ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (174.0ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.6ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (373.0ms)
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-08 17:03:48 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 1397ms (Views: 1393.7ms)
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-08 17:03:49 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 452ms (Views: 449.9ms)
+
+
+Started GET "/assets/github-octocat.png" for 127.0.0.1 at 2017-11-08 17:03:50 -0300
+
+
+Started POST "/git_hub/sign_in" for 127.0.0.1 at 2017-11-08 17:03:53 -0300
+Processing by GitHubController#sign_in as HTML
+  Parameters: {"user"=>"", "password"=>"[FILTERED]"}
+Redirected to http://0.0.0.0:3000/git_hub/repos
+Completed 302 Found in 41072ms
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-08 17:04:34 -0300
+Processing by GitHubController#repos as HTML
+Completed 500 Internal Server Error in 1042ms
+
+NoMethodError (undefined method `name' for ["login", "repos"]:Array):
+  app/services/git_hub_repositorio_service.rb:6:in `block in getRepositorios'
+  app/services/git_hub_repositorio_service.rb:5:in `each'
+  app/services/git_hub_repositorio_service.rb:5:in `getRepositorios'
+  app/services/git_hub_service.rb:71:in `getRepositorios'
+  app/controllers/git_hub_controller.rb:50:in `repos'
+
+
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (62.3ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.4ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.4ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (197.0ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.2ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (148.3ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (2.2ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.8ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (335.0ms)
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-08 17:05:06 -0300
+Processing by GitHubController#repos as HTML
+Completed 500 Internal Server Error in 968ms
+
+Github::Error::Unauthorized (GET https://api.github.com/user/repos: 401 - Requires authentication
+See: https://developer.github.com/v3/repos/#list-your-repositories):
+  app/services/git_hub_repositorio_service.rb:3:in `getRepositorios'
+  app/services/git_hub_service.rb:71:in `getRepositorios'
+  app/controllers/git_hub_controller.rb:50:in `repos'
+
+
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (17.2ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.2ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (231.7ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (106.0ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (303.7ms)
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-08 17:05:09 -0300
+Processing by GitHubController#repos as HTML
+Completed 500 Internal Server Error in 932ms
+
+Github::Error::Unauthorized (GET https://api.github.com/user/repos: 401 - Requires authentication
+See: https://developer.github.com/v3/repos/#list-your-repositories):
+  app/services/git_hub_repositorio_service.rb:3:in `getRepositorios'
+  app/services/git_hub_service.rb:71:in `getRepositorios'
+  app/controllers/git_hub_controller.rb:50:in `repos'
+
+
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (128.7ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (184.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (343.4ms)
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-08 17:05:11 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 109ms (Views: 107.2ms)
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-08 17:05:11 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 119ms (Views: 118.3ms)
+
+
+Started GET "/assets/github-octocat.png" for 127.0.0.1 at 2017-11-08 17:05:11 -0300
+
+
+Started POST "/git_hub/sign_in" for 127.0.0.1 at 2017-11-08 17:05:13 -0300
+Processing by GitHubController#sign_in as HTML
+  Parameters: {"user"=>"", "password"=>"[FILTERED]"}
+Redirected to http://0.0.0.0:3000/git_hub/auth
+Completed 302 Found in 2ms
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-08 17:05:13 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 97ms (Views: 96.6ms)
+
+
+Started GET "/assets/github-octocat.png" for 127.0.0.1 at 2017-11-08 17:05:13 -0300
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-08 17:06:08 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 114ms (Views: 112.7ms)
+
+
+Started GET "/assets/github-octocat.png" for 127.0.0.1 at 2017-11-08 17:06:09 -0300
+
+
+Started POST "/git_hub/sign_in" for 127.0.0.1 at 2017-11-08 17:06:30 -0300
+Processing by GitHubController#sign_in as HTML
+  Parameters: {"user"=>"jffs", "password"=>"[FILTERED]"}
+Redirected to http://0.0.0.0:3000/git_hub/repos
+Completed 302 Found in 3ms
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-08 17:06:30 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 2160ms (Views: 80.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-08 17:26:35 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (7.1ms)
+Completed 200 OK in 61ms (Views: 37.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-08 17:34:15 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (3.6ms)
+Completed 200 OK in 35ms (Views: 19.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-08 17:35:32 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (0.4ms)
+Completed 200 OK in 10ms (Views: 8.1ms)
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-08 17:35:33 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 2672ms (Views: 1526.6ms)
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-08 17:35:36 -0300
+Processing by GitHubController#auth as HTML
+Redirected to http://0.0.0.0:3000/git_hub/repos
+Completed 302 Found in 7ms
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-08 17:35:36 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (36.6ms)
+Completed 200 OK in 1846ms (Views: 683.4ms)
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-08 17:35:38 -0300
+Processing by GitHubController#auth as HTML
+Redirected to http://0.0.0.0:3000/git_hub/repos
+Completed 302 Found in 8ms
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-08 17:35:38 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 1385ms (Views: 310.4ms)
+
+
+Started GET "/git_hub/sign_out" for 127.0.0.1 at 2017-11-08 17:35:41 -0300
+Processing by GitHubController#sign_out as HTML
+Redirected to http://0.0.0.0:3000/git_hub/auth
+Completed 302 Found in 7ms
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-08 17:35:41 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 322ms (Views: 319.5ms)
+
+
+Started GET "/assets/github-octocat.png" for 127.0.0.1 at 2017-11-08 17:35:42 -0300
+
+
+Started POST "/git_hub/sign_in" for 127.0.0.1 at 2017-11-08 17:35:50 -0300
+Processing by GitHubController#sign_in as HTML
+  Parameters: {"user"=>"jffs", "password"=>"[FILTERED]"}
+Redirected to http://0.0.0.0:3000/git_hub/repos
+Completed 302 Found in 145648ms
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-08 17:38:16 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 1445ms (Views: 367.7ms)
+
+
+Started GET "/git_hub/sign_out" for 127.0.0.1 at 2017-11-08 19:36:31 -0300
+Processing by GitHubController#sign_out as HTML
+Redirected to http://0.0.0.0:3000/git_hub/auth
+Completed 302 Found in 6ms
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-08 19:36:31 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 92ms (Views: 91.2ms)
+
+
+Started GET "/assets/github-octocat.png" for 127.0.0.1 at 2017-11-08 19:36:31 -0300
+
+
+Started POST "/git_hub/sign_in" for 127.0.0.1 at 2017-11-08 19:36:39 -0300
+Processing by GitHubController#sign_in as HTML
+  Parameters: {"user"=>"jffs", "password"=>"[FILTERED]"}
+Redirected to http://0.0.0.0:3000/git_hub/auth
+Completed 302 Found in 2005ms
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-08 19:36:41 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 65ms (Views: 64.1ms)
+
+
+Started GET "/assets/github-octocat.png" for 127.0.0.1 at 2017-11-08 19:36:41 -0300
+
+
+Started POST "/git_hub/sign_in" for 127.0.0.1 at 2017-11-08 19:39:31 -0300
+Processing by GitHubController#sign_in as HTML
+  Parameters: {"user"=>"jffs", "password"=>"[FILTERED]"}
+Redirected to http://0.0.0.0:3000/git_hub/auth
+Completed 302 Found in 20868ms
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-08 19:39:52 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 454ms (Views: 450.4ms)
+
+
+Started GET "/assets/github-octocat.png" for 127.0.0.1 at 2017-11-08 19:39:53 -0300
+
+
+Started POST "/git_hub/sign_in" for 127.0.0.1 at 2017-11-08 19:40:22 -0300
+Processing by GitHubController#sign_in as HTML
+  Parameters: {"user"=>"das", "password"=>"[FILTERED]"}
+Redirected to http://0.0.0.0:3000/git_hub/auth
+Completed 302 Found in 948ms
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-08 19:40:23 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 114ms (Views: 112.6ms)
+
+
+Started GET "/assets/github-octocat.png" for 127.0.0.1 at 2017-11-08 19:40:23 -0300
+
+
+Started POST "/git_hub/sign_in" for 127.0.0.1 at 2017-11-08 19:41:27 -0300
+Processing by GitHubController#sign_in as HTML
+  Parameters: {"user"=>"jffs", "password"=>"[FILTERED]"}
+Redirected to http://0.0.0.0:3000/git_hub/auth
+Completed 302 Found in 1025ms
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-08 19:41:28 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 139ms (Views: 137.6ms)
+
+
+Started GET "/assets/github-octocat.png" for 127.0.0.1 at 2017-11-08 19:41:28 -0300
+
+
+Started POST "/git_hub/sign_in" for 127.0.0.1 at 2017-11-08 19:41:35 -0300
+Processing by GitHubController#sign_in as HTML
+  Parameters: {"user"=>"jffs", "password"=>"[FILTERED]"}
+Redirected to http://0.0.0.0:3000/git_hub/auth
+Completed 302 Found in 875ms
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-08 19:41:36 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 190ms (Views: 187.7ms)
+
+
+Started GET "/assets/github-octocat.png" for 127.0.0.1 at 2017-11-08 19:41:36 -0300
+
+
+Started POST "/git_hub/sign_in" for 127.0.0.1 at 2017-11-08 19:42:04 -0300
+Processing by GitHubController#sign_in as HTML
+  Parameters: {"user"=>"jffs", "password"=>"[FILTERED]"}
+Redirected to http://0.0.0.0:3000/git_hub/auth
+Completed 302 Found in 42436ms
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-08 19:42:47 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 406ms (Views: 402.2ms)
+
+
+Started GET "/assets/github-octocat.png" for 127.0.0.1 at 2017-11-08 19:42:47 -0300
+
+
+Started POST "/git_hub/sign_in" for 127.0.0.1 at 2017-11-08 19:43:26 -0300
+Processing by GitHubController#sign_in as HTML
+  Parameters: {"user"=>"jffs", "password"=>"[FILTERED]"}
+Redirected to http://0.0.0.0:3000/git_hub/repos
+Completed 302 Found in 56896ms
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-08 19:44:23 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 979ms (Views: 93.4ms)
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-08 19:46:14 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 1634ms (Views: 94.3ms)
+
+
+Started GET "/git_hub/sign_out" for 127.0.0.1 at 2017-11-08 19:46:18 -0300
+Processing by GitHubController#sign_out as HTML
+Redirected to http://0.0.0.0:3000/git_hub/auth
+Completed 302 Found in 3ms
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-08 19:46:18 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 89ms (Views: 87.6ms)
+
+
+Started GET "/assets/github-octocat.png" for 127.0.0.1 at 2017-11-08 19:46:18 -0300
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-08 19:46:21 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 129ms (Views: 127.8ms)
+
+
+Started GET "/assets/github-octocat.png" for 127.0.0.1 at 2017-11-08 19:46:21 -0300
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-08 19:46:22 -0300
+Processing by GitHubController#repos as HTML
+Completed 500 Internal Server Error in 1055ms
+
+Github::Error::Unauthorized (GET https://api.github.com/user/repos: 401 - Requires authentication
+See: https://developer.github.com/v3/repos/#list-your-repositories):
+  app/services/git_hub_repositorio_service.rb:3:in `getRepositorios'
+  app/services/git_hub_service.rb:68:in `getRepositorios'
+  app/controllers/git_hub_controller.rb:50:in `repos'
+
+
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.6ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (138.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (131.7ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (271.9ms)
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-08 19:46:23 -0300
+Processing by GitHubController#repos as HTML
+Completed 500 Internal Server Error in 832ms
+
+Github::Error::Unauthorized (GET https://api.github.com/user/repos: 401 - Requires authentication
+See: https://developer.github.com/v3/repos/#list-your-repositories):
+  app/services/git_hub_repositorio_service.rb:3:in `getRepositorios'
+  app/services/git_hub_service.rb:68:in `getRepositorios'
+  app/controllers/git_hub_controller.rb:50:in `repos'
+
+
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (26.6ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (144.8ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (100.8ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/juampi/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (221.9ms)

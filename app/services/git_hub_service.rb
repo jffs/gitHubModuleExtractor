@@ -1,5 +1,6 @@
 require "pstore"
 require "json"
+require "net/http"
 class GitHubService
 ## Getters y setters de la sesión actual
   def self.setCurrentGitSession(gitHubObject)
@@ -25,19 +26,15 @@ class GitHubService
 
   # Método para instanciar un objeto git a partir de las credenciales de acceso
   def self.gitStart(params)
-    begin
-      github = Github.new basic_auth: params[:usuario]+':'+params[:password]
-    rescue Github::Error::Unauthorized => e
-      msg= {code: 1, error: "Inicio de sesion erroneo"}
-        return msg
-    rescue Github::Error::GithubError => e
-      msg= {code: 1, error: "Error"}
-        return msg
-    else
-      setCurrentGitSession(github)
-      msg = { :code => 0, :message => "Success!" }
+
+      if checkCredentials(params[:usuario],params[:password])
+        github = Github.new basic_auth: params[:usuario]+':'+params[:password]
+        setCurrentGitSession(github)
+        msg = { :code => 0, :message => "Success!" }
+      else
+        msg = { :code => 1, :message => "username or password are incorrect"}
+      end
       return msg
-    end
   end
 
   def self.sign_out
@@ -95,5 +92,23 @@ class GitHubService
   end
   def self.updateFiles(storeFiles,tree)
     GitHubFilesService.updateFiles(self.getGitContent,storeFiles,tree)
+  end
+
+  def self.checkCredentials(username,password)
+    uri = URI.parse("https://api.github.com")
+    request = Net::HTTP::Get.new(uri)
+    request.basic_auth(username, password)
+
+    req_options = {
+        use_ssl: uri.scheme == "https",
+    }
+
+    response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
+      http.request(request)
+    end
+
+    return response.code == "200"
+# response.code
+# response.body
   end
 end

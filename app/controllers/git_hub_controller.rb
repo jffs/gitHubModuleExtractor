@@ -11,6 +11,9 @@ class GitHubController < ApplicationController
     end
    end
   def sign_in
+      if params[:user].blank? or params[:password].blank?
+        redirect_to git_hub_auth_path, alert: "Neither username nor password can't be blank"
+      else
         @usuario=params[:user]
         @password=params[:password]
         #si no hay una sesión iniciada, la inicio
@@ -18,19 +21,20 @@ class GitHubController < ApplicationController
            response= GitHubService.gitStart({usuario: @usuario, password: @password})
            if response[:code] == 1
              respond_to do |format|
-              format.html { redirect_to git_hub_auth_path, alert: response[:error]}
+              format.html { redirect_to git_hub_auth_path, alert: response[:message]}
              end
            else
              respond_to do |format|
                #@repositorios= getRepositorios
-               format.html { redirect_to git_hub_repos_path, notice: response[:msg]}
+               format.html { redirect_to git_hub_repos_path, notice: response[:message]}
              end
            end
        else
         respond_to do |format|
           format.html { redirect_to git_hub_repos_path, notice: "Welcome!"}
         end
-       end
+         end
+      end
   end
  def sign_out
    GitHubService.sign_out
