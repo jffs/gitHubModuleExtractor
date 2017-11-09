@@ -30,9 +30,9 @@ class GitHubService
       if checkCredentials(params[:usuario],params[:password])
         github = Github.new basic_auth: params[:usuario]+':'+params[:password]
         setCurrentGitSession(github)
-        msg = { :code => 0, :message => "Success!" }
+        msg = { :code => 0, :message => "Welcome! you have signed up successfully."}
       else
-        msg = { :code => 1, :message => "username or password are incorrect"}
+        msg = { :code => 1, :message => "Username or password is incorrect"}
       end
       return msg
   end
@@ -88,12 +88,12 @@ class GitHubService
     return GitHubCommitService.getAddedLines(files)
   end
   def self.getGitContent
-    return Github::Client::Repos::Contents.new(login: GitHubService.getCurrentUser, password: GitHubService.getCurrentGitSession.password)
+    return Github::Client::Repos::Contents.new(login: self.getCurrentUser, password: self.getCurrentGitSession.password)
   end
   def self.updateFiles(storeFiles,tree)
-    GitHubFilesService.updateFiles(self.getGitContent,storeFiles,tree)
+    GitHubFilesService.updateFiles(self.getCurrentUser,self.getGitContent,storeFiles,tree)
   end
-
+#Checkea que las credenciales sean validas 
   def self.checkCredentials(username,password)
     uri = URI.parse("https://api.github.com")
     request = Net::HTTP::Get.new(uri)

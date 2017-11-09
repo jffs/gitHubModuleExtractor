@@ -55,8 +55,7 @@ class GitHubController < ApplicationController
     @lines = GitHubService.getAddedLines(@files)
   end
   def submitForm
-
-    FileToExport.addFileIntoModule(params[:fileName],params[:fileSha],params[:entiredFile], params[:lines])
+    FileToExport.addFileIntoModule(params[:fileName],params[:fileSha],params[:entiredFile], params[:lines], params[:repoName])
     @files=FileToExport.getComponentToExport
     #xml = Builder::XmlMarkup.new(:target=>$stdout, :indent=>2)
     #respond_to do |format|
@@ -85,8 +84,8 @@ class GitHubController < ApplicationController
       render 'repoTree'
     end
   end
-def gitSession
-  @gitSession= GitHubService.getCurrentGitSession
+  def gitSession
+    @gitSession= GitHubService.getCurrentGitSession
   if !@gitSession.nil?
     @currentUser=GitHubService.getCurrentUser
   else
@@ -98,5 +97,11 @@ end
     filesToExport= FileToExport.getComponentToExport
     GitHubService.updateFiles(filesToExport, recursive_tree)
     redirect_to git_hub_repos_path
+  end
+  def filesToExport
+    @stored_files=FileToExport.getComponentToExport
+  end
+  def deleteFile
+    FileToExport.deleteFile(params[:sha])
   end
 end

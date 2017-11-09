@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'git_hub/singleCommit'
   get 'git_hub/sign_out'
   get 'git_hub/exportFiles'
+  get 'git_hub/filesToExport'
   match 'git_hub/singleCommit', to: 'git_hub#submitForm', via: 'post'
   get 'git_hub/submitForm'
   get 'git_hub/sign_in'

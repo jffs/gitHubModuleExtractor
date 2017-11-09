@@ -7513,3 +7513,808 @@ Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-08 20:08:03 -0300
 Processing by GitHubController#repos as HTML
   Rendered git_hub/repos.html.erb within layouts/application (1.9ms)
 Completed 200 OK in 1101ms (Views: 118.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-09 11:05:22 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (3.0ms)
+Completed 200 OK in 35ms (Views: 24.3ms)
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-09 11:05:27 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 9005ms (Views: 1272.1ms)
+
+
+Started GET "/git_hub/sign_out" for 127.0.0.1 at 2017-11-09 11:05:42 -0300
+Processing by GitHubController#sign_out as HTML
+Redirected to http://127.0.0.1:3000/git_hub/auth
+Completed 302 Found in 5ms
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-09 11:05:42 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 339ms (Views: 336.8ms)
+
+
+Started GET "/assets/github-octocat.png" for 127.0.0.1 at 2017-11-09 11:05:43 -0300
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-09 11:05:45 -0300
+Processing by GitHubController#repos as HTML
+Redirected to http://127.0.0.1:3000/git_hub/auth
+Filter chain halted as :gitSession rendered or redirected
+Completed 302 Found in 3ms
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-09 11:05:45 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 310ms (Views: 308.6ms)
+
+
+Started GET "/assets/github-octocat.png" for 127.0.0.1 at 2017-11-09 11:05:46 -0300
+
+
+Started POST "/git_hub/sign_in" for 127.0.0.1 at 2017-11-09 11:05:50 -0300
+Processing by GitHubController#sign_in as HTML
+  Parameters: {"user"=>"jffs", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 377ms
+
+OpenSSL::SSL::SSLError (SSL_connect returned=1 errno=0 state=error: certificate verify failed):
+  app/services/git_hub_service.rb:106:in `checkCredentials'
+  app/services/git_hub_service.rb:30:in `gitStart'
+  app/controllers/git_hub_controller.rb:21:in `sign_in'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (409.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (384.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (863.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-09 11:19:08 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (3.0ms)
+Completed 200 OK in 36ms (Views: 25.0ms)
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-09 11:19:19 -0300
+Processing by GitHubController#repos as HTML
+Redirected to http://127.0.0.1:3000/git_hub/auth
+Filter chain halted as :gitSession rendered or redirected
+Completed 302 Found in 6ms
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-09 11:19:19 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 766ms (Views: 763.7ms)
+
+
+Started GET "/assets/github-octocat.png" for 127.0.0.1 at 2017-11-09 11:19:20 -0300
+
+
+Started POST "/git_hub/sign_in" for 127.0.0.1 at 2017-11-09 11:19:25 -0300
+Processing by GitHubController#sign_in as HTML
+  Parameters: {"user"=>"jffs", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 605ms
+
+OpenSSL::SSL::SSLError (SSL_connect returned=1 errno=0 state=error: certificate verify failed):
+  app/services/git_hub_service.rb:106:in `checkCredentials'
+  app/services/git_hub_service.rb:30:in `gitStart'
+  app/controllers/git_hub_controller.rb:21:in `sign_in'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (414.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (389.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (867.0ms)
+
+
+Started POST "/git_hub/sign_in" for 127.0.0.1 at 2017-11-09 11:19:45 -0300
+Processing by GitHubController#sign_in as HTML
+  Parameters: {"user"=>"jffs", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 359ms
+
+OpenSSL::SSL::SSLError (SSL_connect returned=1 errno=0 state=error: certificate verify failed):
+  app/services/git_hub_service.rb:106:in `checkCredentials'
+  app/services/git_hub_service.rb:30:in `gitStart'
+  app/controllers/git_hub_controller.rb:21:in `sign_in'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (408.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (367.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (845.0ms)
+
+
+Started POST "/git_hub/sign_in" for 127.0.0.1 at 2017-11-09 11:21:59 -0300
+Processing by GitHubController#sign_in as HTML
+  Parameters: {"user"=>"jffs", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 401ms
+
+OpenSSL::SSL::SSLError (SSL_connect returned=1 errno=0 state=error: certificate verify failed):
+  app/services/git_hub_service.rb:106:in `checkCredentials'
+  app/services/git_hub_service.rb:30:in `gitStart'
+  app/controllers/git_hub_controller.rb:21:in `sign_in'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (431.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (385.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (883.1ms)
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-09 11:22:55 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 795ms (Views: 779.9ms)
+
+
+Started GET "/assets/github-octocat.png" for 127.0.0.1 at 2017-11-09 11:23:03 -0300
+
+
+Started POST "/git_hub/sign_in" for 127.0.0.1 at 2017-11-09 11:23:08 -0300
+Processing by GitHubController#sign_in as HTML
+  Parameters: {"user"=>"jffs", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 396ms
+
+OpenSSL::SSL::SSLError (SSL_connect returned=1 errno=0 state=error: certificate verify failed):
+  app/services/git_hub_service.rb:106:in `checkCredentials'
+  app/services/git_hub_service.rb:30:in `gitStart'
+  app/controllers/git_hub_controller.rb:21:in `sign_in'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (409.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (378.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (856.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-09 11:32:53 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (3.0ms)
+Completed 200 OK in 71ms (Views: 56.5ms)
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-09 11:32:58 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 1448ms (Views: 1426.3ms)
+
+
+Started GET "/assets/github-octocat.png" for 127.0.0.1 at 2017-11-09 11:33:08 -0300
+
+
+Started POST "/git_hub/sign_in" for 127.0.0.1 at 2017-11-09 11:34:40 -0300
+Processing by GitHubController#sign_in as HTML
+  Parameters: {"user"=>"jffs", "password"=>"[FILTERED]"}
+Redirected to http://127.0.0.1:3000/git_hub/repos
+Completed 302 Found in 1263ms
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-09 11:34:41 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 1278ms (Views: 358.8ms)
+
+
+Started GET "/git_hub/repoTree?repoNombre=repoParaRomper" for 127.0.0.1 at 2017-11-09 11:36:28 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"repoNombre"=>"repoParaRomper"}
+  Rendered git_hub/_treeContent.html.erb (5.0ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 1381ms (Views: 382.8ms)
+
+
+Started GET "/git_hub/repoTree?name=carga.php&sha=7f1a35dd8437aab81e85aa2b39ccbebc8c7e32fc&type=blob" for 127.0.0.1 at 2017-11-09 11:36:33 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"name"=>"carga.php", "sha"=>"7f1a35dd8437aab81e85aa2b39ccbebc8c7e32fc", "type"=>"blob"}
+  Rendered git_hub/_fileContent.html.erb (5.0ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 1178ms (Views: 347.6ms)
+
+
+Started POST "/git_hub/singleCommit.xml" for 127.0.0.1 at 2017-11-09 11:36:39 -0300
+Processing by GitHubController#submitForm as XML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"caHrGb5umTdr/fGpwWL01fM8v1MPSvaapk35a2Ptn1ooOuqaevfc8cyzaCIHQSsz5di/uhsrKR3TWY1/ovlWMQ==", "entiredFile"=>"on", "fileSha"=>"7f1a35dd8437aab81e85aa2b39ccbebc8c7e32fc", "fileName"=>"carga.php", "fileContent"=>"  move_uploaded_file($_FILES['foto']['tmp_name'],$target_path);\r\n  echo \"La foto fue subida con exito!<br>\";\r\n\r\n  echo \"Podés encontrarla <a href=$target_path >aqui</a>\";\r\n}\r\n", "lines"=>[{"numero"=>"1", "contenido"=>"  move_uploaded_file($_FILES['foto']['tmp_name'],$target_path);\r\n"}, {"numero"=>"2", "contenido"=>"  echo \"La foto fue subida con exito!<br>\";\r\n"}, {"numero"=>"3", "contenido"=>"\r\n"}, {"numero"=>"4", "contenido"=>"  echo \"Podés encontrarla <a href=$target_path >aqui</a>\";\r\n"}, {"numero"=>"5", "contenido"=>"}\r\n"}], "commit"=>"Export selected lines"}
+  Rendered git_hub/submitForm.xml.builder (3.0ms)
+Completed 200 OK in 65ms (Views: 60.0ms)
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-09 11:36:51 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 1151ms (Views: 307.7ms)
+
+
+Started GET "/git_hub/exportFiles" for 127.0.0.1 at 2017-11-09 11:36:58 -0300
+Processing by GitHubController#exportFiles as HTML
+Redirected to http://127.0.0.1:3000/git_hub/repos
+Completed 302 Found in 205696ms
+
+
+Started GET "/git_hub/exportFiles" for 127.0.0.1 at 2017-11-09 11:40:23 -0300
+Processing by GitHubController#exportFiles as HTML
+Completed 500 Internal Server Error in 811ms
+
+NoMethodError (undefined method `delete' for #<Github::Client:0xb339580>):
+  app/services/git_hub_files_service.rb:42:in `deleteFile'
+  app/services/git_hub_files_service.rb:24:in `block in updateFiles'
+  app/services/git_hub_files_service.rb:21:in `each'
+  app/services/git_hub_files_service.rb:21:in `updateFiles'
+  app/services/git_hub_service.rb:94:in `updateFiles'
+  app/controllers/git_hub_controller.rb:99:in `exportFiles'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (424.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (433.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (943.1ms)
+
+
+Started GET "/git_hub/exportFiles" for 127.0.0.1 at 2017-11-09 11:40:55 -0300
+Processing by GitHubController#exportFiles as HTML
+Completed 500 Internal Server Error in 821ms
+
+NoMethodError (undefined method `delete' for #<Github::Client:0xbf9b500>):
+  app/services/git_hub_files_service.rb:42:in `deleteFile'
+  app/services/git_hub_files_service.rb:24:in `block in updateFiles'
+  app/services/git_hub_files_service.rb:21:in `each'
+  app/services/git_hub_files_service.rb:21:in `updateFiles'
+  app/services/git_hub_service.rb:94:in `updateFiles'
+  app/controllers/git_hub_controller.rb:99:in `exportFiles'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (418.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (389.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (899.1ms)
+
+
+Started GET "/git_hub/exportFiles" for 127.0.0.1 at 2017-11-09 11:43:29 -0300
+Processing by GitHubController#exportFiles as HTML
+Completed 500 Internal Server Error in 1877ms
+
+NameError (undefined local variable or method `contents' for GitHubFilesService:Class):
+  app/services/git_hub_files_service.rb:42:in `deleteFile'
+  app/services/git_hub_files_service.rb:24:in `block in updateFiles'
+  app/services/git_hub_files_service.rb:21:in `each'
+  app/services/git_hub_files_service.rb:21:in `updateFiles'
+  app/services/git_hub_service.rb:94:in `updateFiles'
+  app/controllers/git_hub_controller.rb:99:in `exportFiles'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (453.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (410.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (936.1ms)
+
+
+Started GET "/git_hub/exportFiles" for 127.0.0.1 at 2017-11-09 11:44:06 -0300
+Processing by GitHubController#exportFiles as HTML
+Redirected to http://127.0.0.1:3000/git_hub/repos
+Completed 302 Found in 2330ms
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-09 11:44:08 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 963ms (Views: 122.6ms)
+
+
+Started GET "/git_hub/repoTree?repoNombre=repoParaRomper" for 127.0.0.1 at 2017-11-09 11:44:46 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"repoNombre"=>"repoParaRomper"}
+  Rendered git_hub/_treeContent.html.erb (1.0ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 1155ms (Views: 120.0ms)
+
+
+Started GET "/git_hub/sign_out" for 127.0.0.1 at 2017-11-09 12:21:16 -0300
+Processing by GitHubController#sign_out as HTML
+Redirected to http://127.0.0.1:3000/git_hub/auth
+Completed 302 Found in 4ms
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-09 12:21:16 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 105ms (Views: 104.5ms)
+
+
+Started GET "/assets/github-octocat.png" for 127.0.0.1 at 2017-11-09 12:21:16 -0300
+
+
+Started POST "/git_hub/sign_in" for 127.0.0.1 at 2017-11-09 12:21:18 -0300
+Processing by GitHubController#sign_in as HTML
+  Parameters: {"user"=>"jffs", "password"=>"[FILTERED]"}
+Redirected to http://127.0.0.1:3000/git_hub/repos
+Completed 302 Found in 871ms
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-09 12:21:19 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 974ms (Views: 119.1ms)
+
+
+Started GET "/git_hub/repoTree?repoNombre=repoParaRomper" for 127.0.0.1 at 2017-11-09 12:22:58 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"repoNombre"=>"repoParaRomper"}
+  Rendered git_hub/_treeContent.html.erb (1.0ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 1875ms (Views: 128.6ms)
+
+
+Started GET "/git_hub/repoTree?name=Eje11.cs&sha=b6b950ebda0f6628bc83935c098dd0294ed4880e&type=blob" for 127.0.0.1 at 2017-11-09 12:23:01 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"name"=>"Eje11.cs", "sha"=>"b6b950ebda0f6628bc83935c098dd0294ed4880e", "type"=>"blob"}
+  Rendered git_hub/_fileContent.html.erb (3.0ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 918ms (Views: 121.4ms)
+
+
+Started GET "/git_hub/repoTree?name=Entrega3-ServicioVulnerableCTF.pdf&sha=43981e8500805d636fb00a1552610caa8b2320ad&type=blob" for 127.0.0.1 at 2017-11-09 12:23:28 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"name"=>"Entrega3-ServicioVulnerableCTF.pdf", "sha"=>"43981e8500805d636fb00a1552610caa8b2320ad", "type"=>"blob"}
+  Rendered git_hub/_fileContent.html.erb (53.0ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (61.0ms)
+Completed 200 OK in 3856ms (Views: 177.1ms)
+
+
+Started GET "/git_hub/repoTree?name=cargaFixed.php&sha=e242c1ab86129b4fc21aaa133a05834cf4ac39ee&type=blob" for 127.0.0.1 at 2017-11-09 12:23:44 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"name"=>"cargaFixed.php", "sha"=>"e242c1ab86129b4fc21aaa133a05834cf4ac39ee", "type"=>"blob"}
+  Rendered git_hub/_fileContent.html.erb (1.0ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 964ms (Views: 127.5ms)
+
+
+Started POST "/git_hub/singleCommit.xml" for 127.0.0.1 at 2017-11-09 12:23:48 -0300
+Processing by GitHubController#submitForm as XML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HQ4+1Hgd0j26pm1kDdzjJd/6xeEyx8gE6oJ4kV6cH8hElT9XvISX+x3o9O/L/zzDyR7FCCamF4OflgyFn4jWow==", "entiredFile"=>"on", "fileSha"=>"e242c1ab86129b4fc21aaa133a05834cf4ac39ee", "fileName"=>"cargaFixed.php", "fileContent"=>"PD9waHAKIGRhdGVfZGVmYXVsdF90aW1lem9uZV9zZXQoJ0FtZXJpY2EvTmV3X1lvcmsnKTsKICAgICR1cGxvYWRlZF90eXBlID0gJF9GSUxFU1sgJ2ZvdG8nIF1bICd0eXBlJyBdOyAKICAgICR1cGxvYWRlZF9uYW1lID0gJF9GSUxFU1sgJ2ZvdG8nIF1bICduYW1lJyBdOyAKCSR1cGxvYWRlZF9leHQgID0gc3Vic3RyKCAkdXBsb2FkZWRfbmFtZSwgc3RycnBvcyggJHVwbG9hZGVkX25hbWUsICcuJyApICsgMSk7IAoKICAgLy8gaWYoICggJHVwbG9hZGVkX3R5cGUgPT0gImltYWdlL2pwZWciIHx8ICR1cGxvYWRlZF90eXBlID09ICJpbWFnZS9wbmciICkpIHsgCmlmICggc3RydG9sb3dlciggJHVwbG9hZGVkX2V4dCApID09ICJqcGciIHx8IHN0cnRvbG93ZXIoICR1cGxvYWRlZF9leHQgKSA9PSAianBlZyIgfHwgc3RydG9sb3dlciggJHVwbG9hZGVkX2V4dCApID09ICJwbmciICl7CiAgICAgICAKICR0YXJnZXRfcGF0aCAgPSAiLi9pbWFnZW5lcy8iOyAvL0RpcmVjdG9yaW8gZG9uZGUgc2UgYWxtYWNlbmFyw6FuIGxhcyBpbWFnZW5lcwogICR0YXJnZXRfcGF0aCAuPSBiYXNlbmFtZSggJF9GSUxFU1sgJ2ZvdG8nIF1bICduYW1lJyBdICk7IAogIG1vdmVfdXBsb2FkZWRfZmlsZSgkX0ZJTEVTWydmb3RvJ11bJ3RtcF9uYW1lJ10sJHRhcmdldF9wYXRoKTsKICBlY2hvICJMYSBmb3RvIGZ1ZSBzdWJpZGEgY29uIGV4aXRvITxicj4iOwogIGVjaG8gIlBvZMOpcyBlbmNvbnRyYXJsYSA8YSBocmVmPSR0YXJnZXRfcGF0aCA+YXF1aTwvYT4iOwp9CiAgZWxzZSBlY2hvICJFbCBhcmNoaXZvIGRlYmUgc2VyIEpQRUcgbyBQTkciOwoKID8+", "lines"=>[{"numero"=>"1", "contenido"=>"PD9waHAKIGRhdGVfZGVmYXVsdF90aW1lem9uZV9zZXQoJ0FtZXJpY2EvTmV3X1lvcmsnKTsKICAgICR1cGxvYWRlZF90eXBlID0gJF9GSUxFU1sgJ2ZvdG8nIF1bICd0eXBlJyBdOyAKICAgICR1cGxvYWRlZF9uYW1lID0gJF9GSUxFU1sgJ2ZvdG8nIF1bICduYW1lJyBdOyAKCSR1cGxvYWRlZF9leHQgID0gc3Vic3RyKCAkdXBsb2FkZWRfbmFtZSwgc3RycnBvcyggJHVwbG9hZGVkX25hbWUsICcuJyApICsgMSk7IAoKICAgLy8gaWYoICggJHVwbG9hZGVkX3R5cGUgPT0gImltYWdlL2pwZWciIHx8ICR1cGxvYWRlZF90eXBlID09ICJpbWFnZS9wbmciICkpIHsgCmlmICggc3RydG9sb3dlciggJHVwbG9hZGVkX2V4dCApID09ICJqcGciIHx8IHN0cnRvbG93ZXIoICR1cGxvYWRlZF9leHQgKSA9PSAianBlZyIgfHwgc3RydG9sb3dlciggJHVwbG9hZGVkX2V4dCApID09ICJwbmciICl7CiAgICAgICAKICR0YXJnZXRfcGF0aCAgPSAiLi9pbWFnZW5lcy8iOyAvL0RpcmVjdG9yaW8gZG9uZGUgc2UgYWxtYWNlbmFyw6FuIGxhcyBpbWFnZW5lcwogICR0YXJnZXRfcGF0aCAuPSBiYXNlbmFtZSggJF9GSUxFU1sgJ2ZvdG8nIF1bICduYW1lJyBdICk7IAogIG1vdmVfdXBsb2FkZWRfZmlsZSgkX0ZJTEVTWydmb3RvJ11bJ3RtcF9uYW1lJ10sJHRhcmdldF9wYXRoKTsKICBlY2hvICJMYSBmb3RvIGZ1ZSBzdWJpZGEgY29uIGV4aXRvITxicj4iOwogIGVjaG8gIlBvZMOpcyBlbmNvbnRyYXJsYSA8YSBocmVmPSR0YXJnZXRfcGF0aCA+YXF1aTwvYT4iOwp9CiAgZWxzZSBlY2hvICJFbCBhcmNoaXZvIGRlYmUgc2VyIEpQRUcgbyBQTkciOwoKID8+"}], "commit"=>"Export selected lines"}
+  Rendered git_hub/submitForm.xml.builder (0.0ms)
+Completed 200 OK in 61ms (Views: 56.2ms)
+
+
+Started GET "/git_hub/repoTree?repoNombre=repoParaRomper" for 127.0.0.1 at 2017-11-09 12:23:54 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"repoNombre"=>"repoParaRomper"}
+  Rendered git_hub/_treeContent.html.erb (1.0ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 910ms (Views: 138.4ms)
+
+
+Started GET "/git_hub/repoTree?name=index.php&sha=7cf6ce6f4faf4060f953ac45483866fead02915a&type=blob" for 127.0.0.1 at 2017-11-09 12:23:57 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"name"=>"index.php", "sha"=>"7cf6ce6f4faf4060f953ac45483866fead02915a", "type"=>"blob"}
+  Rendered git_hub/_fileContent.html.erb (3.0ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 1168ms (Views: 130.6ms)
+
+
+Started POST "/git_hub/singleCommit.xml" for 127.0.0.1 at 2017-11-09 12:24:24 -0300
+Processing by GitHubController#submitForm as XML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0Io2TYh2KGDDzJUIopmhfBLVsjZ4cRZ1c8SV08S9QZuJETfOTO9tpmSCDINkun6aBDGy32wQyfIG0OHHBamI8A==", "fileSha"=>"7cf6ce6f4faf4060f953ac45483866fead02915a", "fileName"=>"index.php", "fileContent"=>"<html>\r\n<head>\r\n<title>Entrega Vulnerabilidad en php</title>\r\n</head>\r\n<body>\r\n \r\n \r\n<h1>Subir recuerdo de tu viaje más reciente </h1>\r\n <br><br>\r\n    Ubicación: <input type=text name=\"nombre\"><br><br>\r\n    Descripción: <input type=text name=\"apellido\">\r\n<br><br>\r\n    Foto: <input type=file name=\"foto\">\r\n\r\n<br><br>\r\n    <input type=submit value=\"Enviar\">\r\n<br><br>\r\n</center>\r\n\r\n</body>\r\n</html>\r\n \r\n", "lines"=>[{"numero"=>"1"}, {"numero"=>"2"}, {"numero"=>"3"}, {"numero"=>"4"}, {"numero"=>"5"}, {"numero"=>"6"}, {"numero"=>"7"}, {"numero"=>"8", "contenido"=>"<h1>Subir recuerdo de tu viaje más reciente </h1>\r\n"}, {"numero"=>"9", "contenido"=>" <br><br>\r\n"}, {"numero"=>"10", "contenido"=>"    Ubicación: <input type=text name=\"nombre\"><br><br>\r\n"}, {"numero"=>"11", "contenido"=>"    Descripción: <input type=text name=\"apellido\">\r\n"}, {"numero"=>"12", "contenido"=>"<br><br>\r\n"}, {"numero"=>"13"}, {"numero"=>"14"}, {"numero"=>"15"}, {"numero"=>"16"}, {"numero"=>"17"}, {"numero"=>"18"}, {"numero"=>"19"}, {"numero"=>"20"}, {"numero"=>"21"}, {"numero"=>"22"}], "commit"=>"Export selected lines"}
+  Rendered git_hub/submitForm.xml.builder (1.0ms)
+Completed 200 OK in 60ms (Views: 55.1ms)
+
+
+Started GET "/git_hub/repoTree?repoNombre=repoParaRomper" for 127.0.0.1 at 2017-11-09 12:24:43 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"repoNombre"=>"repoParaRomper"}
+  Rendered git_hub/_treeContent.html.erb (1.0ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 970ms (Views: 140.8ms)
+
+
+Started GET "/git_hub/repoTree?name=prueba2.txt&sha=f7e437d54070ad9d6079e3dbbae6099c584bd8a0&type=blob" for 127.0.0.1 at 2017-11-09 12:24:47 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"name"=>"prueba2.txt", "sha"=>"f7e437d54070ad9d6079e3dbbae6099c584bd8a0", "type"=>"blob"}
+  Rendered git_hub/_fileContent.html.erb (0.0ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 935ms (Views: 126.7ms)
+
+
+Started GET "/git_hub/repoTree?name=Eje8.cs&sha=36e4c9b238abcfeef5e40c61830ccd4df846ab10&type=blob" for 127.0.0.1 at 2017-11-09 12:24:52 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"name"=>"Eje8.cs", "sha"=>"36e4c9b238abcfeef5e40c61830ccd4df846ab10", "type"=>"blob"}
+  Rendered git_hub/_fileContent.html.erb (1.0ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 912ms (Views: 123.8ms)
+
+
+Started GET "/git_hub/repoTree?name=Eje9.cs&sha=252379b61d60b8d4709f601a6f3cdbed363171d5&type=blob" for 127.0.0.1 at 2017-11-09 12:24:55 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"name"=>"Eje9.cs", "sha"=>"252379b61d60b8d4709f601a6f3cdbed363171d5", "type"=>"blob"}
+  Rendered git_hub/_fileContent.html.erb (2.0ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 951ms (Views: 129.1ms)
+
+
+Started GET "/git_hub/repoTree?name=Eje9.cs&sha=252379b61d60b8d4709f601a6f3cdbed363171d5&type=blob" for 127.0.0.1 at 2017-11-09 12:25:05 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"name"=>"Eje9.cs", "sha"=>"252379b61d60b8d4709f601a6f3cdbed363171d5", "type"=>"blob"}
+  Rendered git_hub/_fileContent.html.erb (2.0ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 945ms (Views: 115.5ms)
+
+
+Started GET "/git_hub/repoTree?name=index.php&sha=7cf6ce6f4faf4060f953ac45483866fead02915a&type=blob" for 127.0.0.1 at 2017-11-09 12:25:14 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"name"=>"index.php", "sha"=>"7cf6ce6f4faf4060f953ac45483866fead02915a", "type"=>"blob"}
+  Rendered git_hub/_fileContent.html.erb (3.0ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 916ms (Views: 126.1ms)
+
+
+Started GET "/git_hub/exportFiles" for 127.0.0.1 at 2017-11-09 12:25:24 -0300
+Processing by GitHubController#exportFiles as HTML
+Redirected to http://127.0.0.1:3000/git_hub/repos
+Completed 302 Found in 4573ms
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-09 12:25:29 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 907ms (Views: 113.9ms)
+
+
+Started GET "/git_hub/sign_out" for 127.0.0.1 at 2017-11-09 12:51:04 -0300
+Processing by GitHubController#sign_out as HTML
+Redirected to http://127.0.0.1:3000/git_hub/auth
+Completed 302 Found in 10ms
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-09 12:51:04 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 320ms (Views: 318.0ms)
+
+
+Started GET "/assets/github-octocat.png" for 127.0.0.1 at 2017-11-09 12:51:05 -0300
+
+
+Started POST "/git_hub/sign_in" for 127.0.0.1 at 2017-11-09 12:51:06 -0300
+Processing by GitHubController#sign_in as HTML
+  Parameters: {"user"=>"jffs", "password"=>"[FILTERED]"}
+Redirected to http://127.0.0.1:3000/git_hub/repos
+Completed 302 Found in 1167ms
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-09 12:51:07 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 1130ms (Views: 348.7ms)
+
+
+Started GET "/git_hub/repoTree?repoNombre=iaw2015" for 127.0.0.1 at 2017-11-09 12:51:10 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"repoNombre"=>"iaw2015"}
+  Rendered git_hub/_treeContent.html.erb (8.0ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 1195ms (Views: 337.1ms)
+
+
+Started GET "/git_hub/repoTree?repoNombre=repoParaRomper" for 127.0.0.1 at 2017-11-09 12:51:20 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"repoNombre"=>"repoParaRomper"}
+  Rendered git_hub/_treeContent.html.erb (4.0ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 1114ms (Views: 337.8ms)
+
+
+Started GET "/git_hub/repoTree?name=index.php&sha=c5e77326df64a4f43927b882cdaf889adcd7736a&type=blob" for 127.0.0.1 at 2017-11-09 12:51:23 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"name"=>"index.php", "sha"=>"c5e77326df64a4f43927b882cdaf889adcd7736a", "type"=>"blob"}
+  Rendered git_hub/_fileContent.html.erb (9.0ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 1125ms (Views: 337.4ms)
+
+
+Started POST "/git_hub/singleCommit.xml" for 127.0.0.1 at 2017-11-09 12:51:30 -0300
+Processing by GitHubController#submitForm as XML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jIpiZ28YVPMSmyFIwJkzFlYz26d1wmTxtlO4m9mL9w/VEWPkq4ERNbXVuMMGuuzwQNfbTmGju3bDR8yPGJ8+ZA==", "fileSha"=>"c5e77326df64a4f43927b882cdaf889adcd7736a", "repoName"=>"repoParaRomper", "fileName"=>"index.php", "fileContent"=>"<html>\r\n<head>\r\n<title>Entrega Vulnerabilidad en php</title>\r\n</head>\r\n<body>\r\n \r\n \r\n    Foto: <input type=file name=\"foto\">\r\n\r\n<br><br>\r\n    <input type=submit value=\"Enviar\">\r\n<br><br>\r\n</center>\r\n\r\n</body>\r\n</html>\r\n \r\n", "lines"=>[{"numero"=>"1"}, {"numero"=>"2"}, {"numero"=>"3"}, {"numero"=>"4", "contenido"=>"</head>\r\n"}, {"numero"=>"5"}, {"numero"=>"6"}, {"numero"=>"7"}, {"numero"=>"8"}, {"numero"=>"9"}, {"numero"=>"10"}, {"numero"=>"11"}, {"numero"=>"12"}, {"numero"=>"13"}, {"numero"=>"14"}, {"numero"=>"15"}, {"numero"=>"16"}, {"numero"=>"17"}], "commit"=>"Export selected lines"}
+  Rendered git_hub/submitForm.xml.builder (1.0ms)
+Completed 200 OK in 64ms (Views: 56.9ms)
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-09 12:51:34 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 1169ms (Views: 336.2ms)
+
+
+Started GET "/git_hub/exportFiles" for 127.0.0.1 at 2017-11-09 12:51:37 -0300
+Processing by GitHubController#exportFiles as HTML
+Redirected to http://127.0.0.1:3000/git_hub/repos
+Completed 302 Found in 182575ms
+
+
+Started GET "/git_hub/exportFiles" for 127.0.0.1 at 2017-11-09 12:54:39 -0300
+Processing by GitHubController#exportFiles as HTML
+Completed 500 Internal Server Error in 871ms
+
+ArgumentError (parameter cannot be nil):
+  app/services/git_hub_files_service.rb:29:in `block in updateFiles'
+  app/services/git_hub_files_service.rb:24:in `each'
+  app/services/git_hub_files_service.rb:24:in `updateFiles'
+  app/services/git_hub_service.rb:94:in `updateFiles'
+  app/controllers/git_hub_controller.rb:98:in `exportFiles'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (424.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (384.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (887.1ms)
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-09 12:54:50 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 911ms (Views: 126.3ms)
+
+
+Started GET "/git_hub/exportFiles" for 127.0.0.1 at 2017-11-09 12:54:52 -0300
+Processing by GitHubController#exportFiles as HTML
+Completed 500 Internal Server Error in 947ms
+
+ArgumentError (parameter cannot be nil):
+  app/services/git_hub_files_service.rb:29:in `block in updateFiles'
+  app/services/git_hub_files_service.rb:24:in `each'
+  app/services/git_hub_files_service.rb:24:in `updateFiles'
+  app/services/git_hub_service.rb:94:in `updateFiles'
+  app/controllers/git_hub_controller.rb:98:in `exportFiles'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (418.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (386.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (882.1ms)
+
+
+Started GET "/git_hub/exportFiles" for 127.0.0.1 at 2017-11-09 12:59:27 -0300
+Processing by GitHubController#exportFiles as HTML
+Completed 500 Internal Server Error in 933ms
+
+ArgumentError (parameter cannot be nil):
+  app/services/git_hub_files_service.rb:29:in `block in updateFiles'
+  app/services/git_hub_files_service.rb:24:in `each'
+  app/services/git_hub_files_service.rb:24:in `updateFiles'
+  app/services/git_hub_service.rb:94:in `updateFiles'
+  app/controllers/git_hub_controller.rb:98:in `exportFiles'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (420.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (390.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (894.1ms)
+
+
+Started GET "/git_hub/exportFiles" for 127.0.0.1 at 2017-11-09 12:59:44 -0300
+Processing by GitHubController#exportFiles as HTML
+Completed 500 Internal Server Error in 45709ms
+
+ArgumentError (parameter cannot be nil):
+  app/services/git_hub_files_service.rb:29:in `block in updateFiles'
+  app/services/git_hub_files_service.rb:24:in `each'
+  app/services/git_hub_files_service.rb:24:in `updateFiles'
+  app/services/git_hub_service.rb:94:in `updateFiles'
+  app/controllers/git_hub_controller.rb:98:in `exportFiles'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (426.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (391.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (903.1ms)
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-09 13:00:34 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 961ms (Views: 132.3ms)
+
+
+Started GET "/git_hub/sign_out" for 127.0.0.1 at 2017-11-09 13:00:37 -0300
+Processing by GitHubController#sign_out as HTML
+Redirected to http://127.0.0.1:3000/git_hub/auth
+Completed 302 Found in 4ms
+
+
+Started GET "/git_hub/auth" for 127.0.0.1 at 2017-11-09 13:00:37 -0300
+Processing by GitHubController#auth as HTML
+  Rendered git_hub/auth.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 126ms (Views: 125.9ms)
+
+
+Started GET "/assets/github-octocat.png" for 127.0.0.1 at 2017-11-09 13:00:37 -0300
+
+
+Started POST "/git_hub/sign_in" for 127.0.0.1 at 2017-11-09 13:00:38 -0300
+Processing by GitHubController#sign_in as HTML
+  Parameters: {"user"=>"jffs", "password"=>"[FILTERED]"}
+Redirected to http://127.0.0.1:3000/git_hub/repos
+Completed 302 Found in 814ms
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-09 13:00:39 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 971ms (Views: 127.5ms)
+
+
+Started GET "/git_hub/repoTree?repoNombre=repoParaRomper" for 127.0.0.1 at 2017-11-09 13:00:41 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"repoNombre"=>"repoParaRomper"}
+  Rendered git_hub/_treeContent.html.erb (1.0ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 1113ms (Views: 144.0ms)
+
+
+Started GET "/git_hub/repoTree?name=index.php&sha=5361e68a775231460b9e2055559164d93fb33d5b&type=blob" for 127.0.0.1 at 2017-11-09 13:00:44 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"name"=>"index.php", "sha"=>"5361e68a775231460b9e2055559164d93fb33d5b", "type"=>"blob"}
+  Rendered git_hub/_fileContent.html.erb (2.0ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 964ms (Views: 136.7ms)
+
+
+Started POST "/git_hub/singleCommit.xml" for 127.0.0.1 at 2017-11-09 13:00:50 -0300
+Processing by GitHubController#submitForm as XML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yDTtcE/KY+E6+iXkxOGqnAuP/buAgHNNLMwIo5LXUbmRr+zzi1MmJ520vG8CwnV6HWv9UpThrMpZ2Hy3U8OY0g==", "fileSha"=>"5361e68a775231460b9e2055559164d93fb33d5b", "repoName"=>"repoParaRomper", "fileName"=>"index.php", "fileContent"=>"<html>\r\n<head>\r\n<title>Entrega Vulnerabilidad en php</title>\r\n<body>\r\n \r\n \r\n    Foto: <input type=file name=\"foto\">\r\n\r\n<br><br>\r\n    <input type=submit value=\"Enviar\">\r\n<br><br>\r\n</center>\r\n\r\n</body>\r\n</html>\r\n \r\n", "lines"=>[{"numero"=>"1"}, {"numero"=>"2"}, {"numero"=>"3", "contenido"=>"<title>Entrega Vulnerabilidad en php</title>\r\n"}, {"numero"=>"4"}, {"numero"=>"5"}, {"numero"=>"6"}, {"numero"=>"7"}, {"numero"=>"8"}, {"numero"=>"9"}, {"numero"=>"10"}, {"numero"=>"11"}, {"numero"=>"12"}, {"numero"=>"13"}, {"numero"=>"14"}, {"numero"=>"15"}, {"numero"=>"16"}], "commit"=>"Export selected lines"}
+  Rendered git_hub/submitForm.xml.builder (0.0ms)
+Completed 200 OK in 59ms (Views: 55.3ms)
+
+
+Started GET "/git_hub/exportFiles" for 127.0.0.1 at 2017-11-09 13:00:52 -0300
+Processing by GitHubController#exportFiles as HTML
+Redirected to http://127.0.0.1:3000/git_hub/repos
+Completed 302 Found in 3020ms
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-09 13:00:55 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 921ms (Views: 127.4ms)
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-09 14:15:01 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 8461ms (Views: 441.8ms)
+
+
+Started GET "/git_hub/filesToExport" for 127.0.0.1 at 2017-11-09 14:15:14 -0300
+Processing by GitHubController#filesToExport as HTML
+  Rendered git_hub/filesToExport.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 132ms (Views: 128.7ms)
+
+
+Started GET "/git_hub/filesToExport" for 127.0.0.1 at 2017-11-09 14:15:39 -0300
+Processing by GitHubController#filesToExport as HTML
+  Rendered git_hub/filesToExport.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 130ms (Views: 128.0ms)
+
+
+Started GET "/git_hub/filesToExport" for 127.0.0.1 at 2017-11-09 14:19:23 -0300
+Processing by GitHubController#filesToExport as HTML
+  Rendered git_hub/filesToExport.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 139ms (Views: 136.3ms)
+
+
+Started GET "/git_hub/filesToExport" for 127.0.0.1 at 2017-11-09 14:21:30 -0300
+Processing by GitHubController#filesToExport as HTML
+  Rendered git_hub/filesToExport.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 138ms (Views: 135.3ms)
+
+
+Started GET "/git_hub/filesToExport" for 127.0.0.1 at 2017-11-09 14:27:31 -0300
+Processing by GitHubController#filesToExport as HTML
+  Rendered git_hub/filesToExport.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 140ms (Views: 136.9ms)
+
+
+Started GET "/git_hub/filesToExport" for 127.0.0.1 at 2017-11-09 14:30:18 -0300
+Processing by GitHubController#filesToExport as HTML
+  Rendered git_hub/filesToExport.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 138ms (Views: 136.5ms)
