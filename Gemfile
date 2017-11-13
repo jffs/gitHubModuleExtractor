@@ -27,7 +27,7 @@ gem 'pry'
 gem "github_api"
 gem "twitter-bootstrap-rails"
 gem 'tzinfo-data'
-gem 'rails_12factor', group: :production
+gem 'rails_12factor'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
