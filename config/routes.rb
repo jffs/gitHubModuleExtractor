@@ -10,9 +10,12 @@ Rails.application.routes.draw do
   get 'git_hub/exportFiles'
   get 'git_hub/filesToExport'
   match 'git_hub/singleCommit', to: 'git_hub#submitForm', via: 'post'
+  match 'git_hub/exportFiles', to: 'git_hub#exportFiles', via: 'post'
   get 'git_hub/submitForm'
+  get 'git_hub/deleteFile'
   get 'git_hub/sign_in'
   post 'git_hub/sign_in'
+  root :to => "git_hub#auth"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

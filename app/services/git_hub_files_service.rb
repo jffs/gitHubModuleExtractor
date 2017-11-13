@@ -24,10 +24,9 @@ class GitHubFilesService
     stored_files.each do |file|
       full_path=recursive_tree[file.sha]
      if file.deleted == "true"
-       deleteFile(userName,file.repo, contents,file.sha,full_path)
+       response=deleteFile(userName,file.repo, contents,file.sha,full_path)
      else
-        file_contentData = contents.find(userName,file.repo, full_path)
-
+       file_contentData = contents.find(userName,file.repo, full_path)
        lines = Base64.decode64(file_contentData.content).lines
        #Busco las lineas del archivo original, usando el numero en las lineas del archivo guardado
          file.lines.each do |line|
@@ -36,7 +35,7 @@ class GitHubFilesService
          end
         end
         modifiedFile = lines.join("")
-        contents.update(userName,file.repo,full_path,
+        response= contents.update(userName,file.repo,full_path,
                         path: full_path,
                         content: modifiedFile ,
                         message: "Update file" ,

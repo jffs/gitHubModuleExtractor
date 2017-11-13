@@ -10,14 +10,21 @@ class FileToExport
     @sha=sha
     @repo=repo
   end
+
   def name
     return @name
   end
   def deleted
     return @deleted
   end
+  def set_deleted(deleted)
+    @deleted=deleted
+  end
   def lines
     return @lines
+  end
+  def set_lines(lines)
+    @lines=lines
   end
   def sha
     return @sha
@@ -40,11 +47,19 @@ class FileToExport
   def self.addFileIntoModule(name, sha, deleted, lines, repo)
     array_content=Array.new();
     aux_array= getComponentToExport;
+    #Si ya hay elementos para exportar
     if !aux_array.nil?
       array_content= aux_array;
     end
-    addedFile= FileToExport.new(name, sha,deleted, lines, repo)
-    array_content.push(addedFile)
+    #Si el archivo no esta en el arreglo, lo agrego. Caso contrario, modifico el existente
+    index=getFileIndex(sha)
+    if index.nil?
+      addedFile= FileToExport.new(name, sha,deleted, lines, repo)
+      array_content.push(addedFile)
+    else
+      array_content[index].set_lines(lines)
+      array_content[index].set_deleted(deleted)
+    end
     setComponentToExport(array_content)
   end
   def self.deleteFiles(array_sha)
@@ -54,10 +69,20 @@ class FileToExport
   end
   def self.deleteFile(sha)
    index=getFileIndex(sha)
-   setComponentToExport(getComponentToExport.delete_at(index))
+   aux=getComponentToExport
+   aux.delete_at(index)
+   if aux.length > 0
+     setComponentToExport(aux)
+   else
+     setComponentToExport(nil)
+   end
   end
   def self.getFileIndex(sha)
-    getComponentToExport.find_index{|f| f.sha == sha}
+    if !getComponentToExport.nil?
+      getComponentToExport.find_index{|f| f.sha == sha}
+    else
+      return nil
+    end
   end
   #metodo para borrar un componente?
   #metodo para editar un componente?
@@ -68,5 +93,13 @@ class FileToExport
       return 0
     end
 
+  end
+  def self.getLines(file_sha)
+    index= getFileIndex(file_sha)
+    if index.nil?
+      return []
+    else
+      getComponentToExport[index].lines
+    end
   end
 end

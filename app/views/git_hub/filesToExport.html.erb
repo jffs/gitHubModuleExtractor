@@ -1,6 +1,4 @@
-<%= form_tag({controller: "git_hub", action: "exportFiles"}) do %>
-    <% @stored_files.each do |file| %>
-      <div class="panel panel-primary panel-default">
+ <div class="panel panel-primary panel-default">
         <div class="panel-heading">
           <div class="row">
             <div class="col-md-6">
@@ -16,31 +14,19 @@
               <th>Delete</th>
             </thead>
             <tbody>
+            <% @stored_files.each do |file| %>
             <tr>
               <td><%= file.name%></td>
               <td><%= file.repo%></td>
-              <td><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
-              <td><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><i class="fa fa-trash" aria-hidden="true"></i></button></td>
-            </tr>
-            <!--
-            <file.lines.each do |line| %>
-                < if !line[:contenido].nil? %>
-                    <tr>
-                      <td style="border-top:0px;">< line[:numero] %></td>
-                      <td style="white-space: pre-wrap; border-top:0px;">< line[:contenido]%></td>
+              <td><%= link_to '<i class="fa fa-pencil" aria-hidden="true"></i>'.html_safe, {:controller => :git_hub, :action => :repoTree, :sha => file.sha, :name =>file.name, :type => 'blob' }, {class:"btn btn-primary btn-xs"}%></td>
+              <td><%= link_to '<i class="fa fa-trash" aria-hidden="true"></i>'.html_safe, {:controller => :git_hub, :action => :deleteFile, :sha => file.sha }, {class:"btn btn-danger btn-xs"}%></td>
 
-                      <!--td style="border-top:0px;">
-                      <%#= hidden_field_tag 'lines[][numero]', cont%>
-                    <%#= check_box_tag 'lines[][contenido]', line, false,{:id => cont, :class=> "checkboxLine"} %>
-                  </td>
-                </tr>
-                <end%>
-            <end%>
-            -->
+            </tr>
+            <% end %>
             </tbody>
           </table>
 
       </div>
-    <% end %>
+ <%= form_tag({controller: "git_hub", action: "exportFiles", format: "xml"}) do %>
     <%= submit_tag("Create module", :class=>'btn btn-primary') %>
 <%end%>

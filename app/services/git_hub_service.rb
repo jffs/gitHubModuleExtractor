@@ -56,7 +56,8 @@ class GitHubService
 
 # Método que devuelve los archivos de un "tree" a partir del "sha" del padre
   def self.getFilesfromSha(treeSha)
-    return GitHubFilesService.getFilesfromSha(getCurrentGitSession,
+
+      GitHubFilesService.getFilesfromSha(getCurrentGitSession,
                                               getCurrentUser,
                                               GitHubRepositorioService.getCurrentRepo,
                                               treeSha)

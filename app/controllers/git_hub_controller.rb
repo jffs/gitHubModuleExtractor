@@ -39,7 +39,7 @@ class GitHubController < ApplicationController
   def sign_out
     GitHubService.sign_out
     respond_to do |format|
-      format.html { redirect_to git_hub_auth_path}
+      format.html { redirect_to root_path}
     end
   end
   def commits
@@ -56,12 +56,7 @@ class GitHubController < ApplicationController
   end
   def submitForm
     FileToExport.addFileIntoModule(params[:fileName],params[:fileSha],params[:entiredFile], params[:lines], params[:repoName])
-    @files=FileToExport.getComponentToExport
-    #xml = Builder::XmlMarkup.new(:target=>$stdout, :indent=>2)
-    #respond_to do |format|
-     #format.html # index.html.erb
-    #format.xml { send_data render_to_string(:submitForm), filename: 'module.xml', type: 'application/xml', disposition: 'attachment' }
-    #end
+    redirect_to(:back, notice: "Success")
   end
   def repoTree
     if !params[:repoNombre].nil?
@@ -70,7 +65,11 @@ class GitHubController < ApplicationController
     @currentRepo=GitHubRepositorioService.getCurrentRepo;
     @fileSelected=false
     if params[:sha].nil?
-      @repoTree = GitHubService.getFilesfromSha('master')
+      begin
+        @repoTree = GitHubService.getFilesfromSha('master')
+      rescue => e
+        redirect_to git_hub_repos_path, alert: 'This repository is empty!'
+      end
     else
       if params[:type] == 'tree'
         @repoTree = GitHubService.getFilesfromSha(params[:sha])
@@ -79,11 +78,12 @@ class GitHubController < ApplicationController
         @fileSelected=true
         @fileSha=params[:sha]
         @contenido=GitHubService.getFileContent(params[:sha])
-
+        @lines=FileToExport.getLines(@fileSha)
       end
       render 'repoTree'
     end
   end
+
   def gitSession
     @gitSession= GitHubService.getCurrentGitSession
   if !@gitSession.nil?
@@ -93,15 +93,24 @@ class GitHubController < ApplicationController
   end
 end
   def exportFiles
+    @files=FileToExport.getComponentToExport
     recursive_tree= GitHubRepositorioService.getRecursiveTree('master')
-    filesToExport= FileToExport.getComponentToExport
-    GitHubService.updateFiles(filesToExport, recursive_tree)
-    redirect_to git_hub_repos_path
+    GitHubService.updateFiles(@files, recursive_tree)
+    xml = Builder::XmlMarkup.new(:target=>$stdout, :indent=>2)
+    respond_to do |format|
+     format.xml { send_data render_to_string(:exportFiles), filename: 'exported_module.xml', type: 'application/xml', disposition: 'attachment' }
+    end
+    FileToExport.setComponentToExport(nil)
   end
   def filesToExport
-    @stored_files=FileToExport.getComponentToExport
+    if FileToExport.getFilesCount == 0
+      redirect_to git_hub_repos_path, alert: "There's no file to export yet"
+    else
+      @stored_files=FileToExport.getComponentToExport
+    end
   end
   def deleteFile
     FileToExport.deleteFile(params[:sha])
+    redirect_to git_hub_filesToExport_path, notice: "The file was deleted."
   end
 end
