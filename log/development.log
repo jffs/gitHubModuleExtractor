@@ -13018,3 +13018,190 @@ Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-13 12:31:03 -0300
 Processing by GitHubController#repos as HTML
   Rendered git_hub/repos.html.erb within layouts/application (1.0ms)
 Completed 200 OK in 925ms (Views: 141.0ms)
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-13 12:50:36 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 1081ms (Views: 144.3ms)
+
+
+Started GET "/git_hub/repoTree?repoNombre=repoParaRomper" for 127.0.0.1 at 2017-11-13 12:50:47 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"repoNombre"=>"repoParaRomper"}
+  Rendered git_hub/_treeContent.html.erb (1.0ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 1058ms (Views: 130.8ms)
+
+
+Started GET "/git_hub/repoTree?name=Eje9.cs&sha=bb9fedc3a41098915aa0d60bb9c2cbe131eee054&type=blob" for 127.0.0.1 at 2017-11-13 12:50:50 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"name"=>"Eje9.cs", "sha"=>"bb9fedc3a41098915aa0d60bb9c2cbe131eee054", "type"=>"blob"}
+  Rendered git_hub/_fileContent.html.erb (3.0ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 944ms (Views: 133.3ms)
+
+
+Started POST "/git_hub/singleCommit" for 127.0.0.1 at 2017-11-13 12:50:58 -0300
+Processing by GitHubController#submitForm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vu/p6XNZ0G7Pkh7U1/k08GMlMRYCpgh9BA4h6cSh9LlePuMPJ6bY3PZVLxj8du3t5YHT1VgBuuVyynrM6J2BuQ==", "fileSha"=>"bb9fedc3a41098915aa0d60bb9c2cbe131eee054", "repoName"=>"repoParaRomper", "fileName"=>"Eje9.cs", "fileContent"=>"{\t\r\n\t//Para ejecutar con parametros ir a Ejecutar - > Ejecutar con -> Parámetros personalizados. \r\n\tpublic static void Main(string[] args)\r\n\t{\tbool cumple;\r\n\t\tint i;\r\n\t\tConsole.WriteLine (\"Iniciando saludos\");\r\n\t\tif (args.Length != 0) {\r\n\t\t\tforeach (string nombre in args) {\r\n\t\t\t\ti = 0;\r\n\t\t\t\tcumple = true;\r\n\t\t\t\tint j=nombre.Length-1;\r\n\t\t\t\twhile (cumple && i < j) {\r\n\t\t\t\t\tif (nombre [i] != nombre [j]) {\r\n\t\t\t\t\t\tcumple = false;\r\n\t\t\t\t\t}\r\n\t\t\t\t\ti++;\r\n\t\t\t\t\tj--;\r\n\t\t\t\t}\r\n\t\t\t\tif (cumple)\r\n\t\t\t\t\tConsole.WriteLine (\"{0} es palíndromo\", nombre);\r\n\t\t\t\telse\r\n\t\t\t\t\tConsole.WriteLine (\"{0} no es palíndromo\", nombre);\r\n\t\t\t}\r\n\t\t} else\r\n}\r\n}", "lines"=>[{"numero"=>"1", "contenido"=>"{\t\r\n"}, {"numero"=>"2", "contenido"=>"\t//Para ejecutar con parametros ir a Ejecutar - > Ejecutar con -> Parámetros personalizados. \r\n"}, {"numero"=>"3", "contenido"=>"\tpublic static void Main(string[] args)\r\n"}, {"numero"=>"4"}, {"numero"=>"5"}, {"numero"=>"6"}, {"numero"=>"7"}, {"numero"=>"8"}, {"numero"=>"9"}, {"numero"=>"10"}, {"numero"=>"11"}, {"numero"=>"12"}, {"numero"=>"13"}, {"numero"=>"14"}, {"numero"=>"15"}, {"numero"=>"16"}, {"numero"=>"17"}, {"numero"=>"18"}, {"numero"=>"19"}, {"numero"=>"20"}, {"numero"=>"21"}, {"numero"=>"22"}, {"numero"=>"23"}, {"numero"=>"24"}, {"numero"=>"25"}, {"numero"=>"26"}], "commit"=>"Save selected lines"}
+Redirected to http://127.0.0.1:3000/git_hub/repoTree?name=Eje9.cs&sha=bb9fedc3a41098915aa0d60bb9c2cbe131eee054&type=blob
+Completed 302 Found in 0ms
+
+
+Started GET "/git_hub/repoTree?name=Eje9.cs&sha=bb9fedc3a41098915aa0d60bb9c2cbe131eee054&type=blob" for 127.0.0.1 at 2017-11-13 12:50:58 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"name"=>"Eje9.cs", "sha"=>"bb9fedc3a41098915aa0d60bb9c2cbe131eee054", "type"=>"blob"}
+  Rendered git_hub/_fileContent.html.erb (2.0ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 935ms (Views: 136.5ms)
+
+
+Started GET "/git_hub/filesToExport" for 127.0.0.1 at 2017-11-13 12:51:01 -0300
+Processing by GitHubController#filesToExport as HTML
+  Rendered git_hub/filesToExport.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 110ms (Views: 114.6ms)
+
+
+Started GET "/git_hub/filesToExport" for 127.0.0.1 at 2017-11-13 12:51:03 -0300
+Processing by GitHubController#filesToExport as HTML
+  Rendered git_hub/filesToExport.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 114ms (Views: 116.7ms)
+
+
+Started GET "/git_hub/filesToExport" for 127.0.0.1 at 2017-11-13 12:52:05 -0300
+Processing by GitHubController#filesToExport as HTML
+  Rendered git_hub/filesToExport.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 169ms
+
+ActionView::Template::Error (undefined method `root_path_path' for #<#<Class:0x99ed5d0>:0x8dd0470>):
+    12:       <% if !@gitSession.nil? %>
+    13:           <div class="navbar-header">
+    14:             <a class="navbar-brand" href="#">Project name</a>
+    15:             <%= link_to "Project name", :root_path %>
+    16:           </div>
+    17:           <ul>
+    18:             <p class="navbar-text pull-right navbar-right"><%= link_to "Sign out", :controller => :git_hub, :action => :sign_out%> </p>
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__424000917_74322984'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (454.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (421.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (964.1ms)
+
+
+Started GET "/git_hub/filesToExport" for 127.0.0.1 at 2017-11-13 12:52:17 -0300
+Processing by GitHubController#filesToExport as HTML
+  Rendered git_hub/filesToExport.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 135ms (Views: 122.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-13 12:52:19 -0300
+Processing by GitHubController#auth as HTML
+Redirected to http://127.0.0.1:3000/git_hub/repos
+Completed 302 Found in 1ms
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-13 12:52:19 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 1020ms (Views: 120.9ms)
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-13 12:52:38 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 935ms (Views: 122.3ms)
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-13 12:52:45 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 945ms (Views: 124.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-13 12:52:47 -0300
+Processing by GitHubController#auth as HTML
+Redirected to http://127.0.0.1:3000/git_hub/repos
+Completed 302 Found in 1ms
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-13 12:52:47 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 993ms (Views: 140.2ms)
+
+
+Started GET "/git_hub/repoTree?repoNombre=repoParaRomper" for 127.0.0.1 at 2017-11-13 12:52:50 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"repoNombre"=>"repoParaRomper"}
+  Rendered git_hub/_treeContent.html.erb (0.0ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 1272ms (Views: 150.1ms)
+
+
+Started GET "/git_hub/repoTree?name=Eje8.cs&sha=36e4c9b238abcfeef5e40c61830ccd4df846ab10&type=blob" for 127.0.0.1 at 2017-11-13 12:52:54 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"name"=>"Eje8.cs", "sha"=>"36e4c9b238abcfeef5e40c61830ccd4df846ab10", "type"=>"blob"}
+  Rendered git_hub/_fileContent.html.erb (1.0ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 964ms (Views: 136.0ms)
+
+
+Started POST "/git_hub/singleCommit" for 127.0.0.1 at 2017-11-13 12:52:57 -0300
+Processing by GitHubController#submitForm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M++DolqcEDMCl8W/9Iy9vyws7+Bn4aZzy+loo5yI5fnTPolEDmMYgTtQ9HPfA2SiqogNIz1GFOu9LTOGsLSQ+Q==", "entiredFile"=>"on", "fileSha"=>"36e4c9b238abcfeef5e40c61830ccd4df846ab10", "repoName"=>"repoParaRomper", "fileName"=>"Eje8.cs", "fileContent"=>"nuevo contenido", "lines"=>[{"numero"=>"1", "contenido"=>"nuevo contenido"}], "commit"=>"Save selected lines"}
+Redirected to http://127.0.0.1:3000/git_hub/repoTree?name=Eje8.cs&sha=36e4c9b238abcfeef5e40c61830ccd4df846ab10&type=blob
+Completed 302 Found in 6ms
+
+
+Started GET "/git_hub/repoTree?name=Eje8.cs&sha=36e4c9b238abcfeef5e40c61830ccd4df846ab10&type=blob" for 127.0.0.1 at 2017-11-13 12:52:57 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"name"=>"Eje8.cs", "sha"=>"36e4c9b238abcfeef5e40c61830ccd4df846ab10", "type"=>"blob"}
+  Rendered git_hub/_fileContent.html.erb (0.0ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 912ms (Views: 129.5ms)
+
+
+Started GET "/git_hub/repoTree?repoNombre=repoParaRomper" for 127.0.0.1 at 2017-11-13 12:53:08 -0300
+Processing by GitHubController#repoTree as HTML
+  Parameters: {"repoNombre"=>"repoParaRomper"}
+  Rendered git_hub/_treeContent.html.erb (1.0ms)
+  Rendered git_hub/repoTree.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 913ms (Views: 122.4ms)
+
+
+Started GET "/git_hub/filesToExport" for 127.0.0.1 at 2017-11-13 12:53:11 -0300
+Processing by GitHubController#filesToExport as HTML
+  Rendered git_hub/filesToExport.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 116ms (Views: 113.8ms)
+
+
+Started POST "/git_hub/exportFiles.xml" for 127.0.0.1 at 2017-11-13 12:53:14 -0300
+Processing by GitHubController#exportFiles as XML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3lwAvzf7Euycm36jSyH3xSRE2IDzhsFn5w2FsfTBi9U+jQpZYwQaXqVcT29gri7YouA6Q6khc/+Ryd6U2P3+1Q==", "commit"=>"Create module"}
+  Rendered git_hub/exportFiles.xml.builder (0.0ms)
+  Rendered text template (0.0ms)
+Sent data exported_module.xml (1.0ms)
+Completed 200 OK in 4507ms (Views: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-13 12:53:21 -0300
+Processing by GitHubController#auth as HTML
+Redirected to http://127.0.0.1:3000/git_hub/repos
+Completed 302 Found in 1ms
+
+
+Started GET "/git_hub/repos" for 127.0.0.1 at 2017-11-13 12:53:21 -0300
+Processing by GitHubController#repos as HTML
+  Rendered git_hub/repos.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 957ms (Views: 112.3ms)

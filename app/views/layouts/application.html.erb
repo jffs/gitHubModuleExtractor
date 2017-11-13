@@ -11,7 +11,7 @@
   <div class="container">
       <% if !@gitSession.nil? %>
           <div class="navbar-header">
-            <a class="navbar-brand" href="#">Project name</a>
+            <%= link_to "Project name", :root, {class: 'navbar-brand'} %>
           </div>
           <ul>
             <p class="navbar-text pull-right navbar-right"><%= link_to "Sign out", :controller => :git_hub, :action => :sign_out%> </p>
