@@ -3,96 +3,104 @@ require "json"
 require "net/http"
 class GitHubService
 ## Getters y setters de la sesión actual
-  def self.setCurrentGitSession(gitHubObject)
-    store = PStore.new("data.pstore")
-      store.transaction do
-        store[:github_session] = gitHubObject
-        store[:current_user] = gitHubObject.login
-      end
-  end
+  ##
+# def self.setCurrentGitSession(gitHubObject)
+    #session[:git_session] = gitHubObject
+    #session[:current_user] = gitHubObject.login
+    # store = storeInstance
+  #   store.transaction do
+  #     store[:github_session] = gitHubObject
+  #     store[:current_user] = gitHubObject.login
+  #  end
+  # end
 
-  def self.getCurrentGitSession
+ ##
+# def self.getCurrentGitSession
     #obtengo la sesión, si la hay de git
-    store = PStore.new("data.pstore")
-    @github = store.transaction { store.fetch(:github_session, nil) }
-    return @github
-  end
+    #store = storeInstance
+    #@github = store.transaction { store.fetch(:github_session, nil) }
+    #return @github
+    #return session[:git_session]
+  #end
 
-  def self.getCurrentUser
-    store = PStore.new("data.pstore")
-    user = store.transaction { store.fetch(:current_user, nil) }
-    return user
-  end
+  #def self.getCurrentUser
+    #store = storeInstance
+    #user = store.transaction { store.fetch(:current_user, nil) }
+    #return user
+    #return session[current_user]
+  #end
 
   # Método para instanciar un objeto git a partir de las credenciales de acceso
   def self.gitStart(params)
-
       if checkCredentials(params[:usuario],params[:password])
         github = Github.new basic_auth: params[:usuario]+':'+params[:password]
-        setCurrentGitSession(github)
-        msg = { :code => 0, :message => "Welcome! you have signed up successfully."}
+        #setCurrentGitSession(github)
+        msg = { :code => 0, :message => "Welcome! you have signed up successfully.", :github => github}
       else
         msg = { :code => 1, :message => "Username or password is incorrect"}
       end
       return msg
   end
 
-  def self.sign_out
-    store = PStore.new("data.pstore")
-    store.transaction do
-      store.roots.each do |root|
-        store.delete(root)
-      end
-    end
-  end
+  #def self.sign_out
+    #reset_session
+    #store = storeInstance
+    #store.transaction do
+     # store.roots.each do |root|
+      #  store.delete(root)
+      #end
+    #end
+  #end
 ## Interacción con los archivos
 # Método que devuelve el contenido de un archivo, apartir de su "sha"
-  def self.getFileContent(fileSha)
-    return GitHubFilesService.getFileContent(getCurrentGitSession,
-                                             getCurrentUser,
-                                             GitHubRepositorioService.getCurrentRepo,
-                                             fileSha)
+  def self.getFileContent(git_session,current_user,current_repo,file_sha)
+    return GitHubFilesService.getFileContent(git_session,
+                                             current_user,
+                                             current_repo,
+                                             file_sha)
   end
 
 # Método que devuelve los archivos de un "tree" a partir del "sha" del padre
-  def self.getFilesfromSha(treeSha)
-
-      GitHubFilesService.getFilesfromSha(getCurrentGitSession,
-                                              getCurrentUser,
-                                              GitHubRepositorioService.getCurrentRepo,
-                                              treeSha)
+  def self.getFilesfromSha(git_session,current_user,current_repo,tree_sha)
+      GitHubFilesService.getFilesfromSha(git_session,
+                                         current_user,
+                                         current_repo,
+                                              tree_sha)
 
   end
 
 ## Interacción con los Repositorios
-  def self.getRepositorios
-    return GitHubRepositorioService.getRepositorios(getCurrentUser)
+  def self.getRepositorios(current_user)
+    return GitHubRepositorioService.getRepositorios(current_user)
   end
 ## Interacción con los Commits
 # Devuelve los commits de un repositorio
-  def self.getCommitsData(repositorioNombre)
-    GitHubRepositorioService.setCurrentRepo(repositorioNombre)
-    return GitHubCommitService.getCommitsData(getCurrentGitSession,getCurrentUser,repositorioNombre)
-  end
+ ## def self.getCommitsData(repositorioNombre)
+   # GitHubRepositorioService.setCurrentRepo(repositorioNombre)
+    #return GitHubCommitService.getCommitsData(getCurrentGitSession,getCurrentUser,repositorioNombre)
+  #end
 
 # Devuelve los archivos del commit, a partir de su "sha"
-  def self.getCommitedFiles(commitSha)
-    return GitHubCommitService.getCommitedFiles(getCurrentGitSession,
-                                                getCurrentUser,
-                                                GitHubRepositorioService.getCurrentRepo,
-                                                commitSha)
-  end
+  #def self.getCommitedFiles(commitSha)
+   # return GitHubCommitService.getCommitedFiles(getCurrentGitSession,
+    #                                            getCurrentUser,
+    #                                            GitHubRepositorioService.getCurrentRepo,
+   #                                             commitSha)
+  #end
 
 # Devuelve las lineas agregadas de un archivo
 
-  def self.getAddedLines(files)
-    return GitHubCommitService.getAddedLines(files)
-  end
+##
+  #  def self.getAddedLines(files)
+    #return GitHubCommitService.getAddedLines(files)
+  #end
   def self.getGitContent
-    return Github::Client::Repos::Contents.new(login: self.getCurrentUser, password: self.getCurrentGitSession.password)
+    return Github::Client::Repos::Contents.new(login: @current_user, password: @git_session.password)
   end
-  def self.updateFiles(storeFiles,tree)
-    GitHubFilesService.updateFiles(self.getCurrentUser,self.getGitContent,storeFiles,tree)
+  def self.updateFiles(current_user,git_session,storeFiles,tree)
+    @current_user=current_user
+    @git_session=git_session
+    GitHubFilesService.updateFiles(current_user,self.getGitContent,storeFiles,tree)
   end
 #Checkea que las credenciales sean validas 
   def self.checkCredentials(username,password)
@@ -112,4 +120,8 @@ class GitHubService
 # response.code
 # response.body
   end
+ ## def self.storeInstance
+    #return PStore.new(sessionId+"data.pstore")
+   # return PStore.new("data.pstore")
+  #end
 end

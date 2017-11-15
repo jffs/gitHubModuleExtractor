@@ -16,7 +16,7 @@
           <ul>
             <p class="navbar-text pull-right navbar-right"><%= link_to "Sign out", :controller => :git_hub, :action => :sign_out%> </p>
             <p class="navbar-text pull-right navbar-right">Signed in as <span class="text-info"> <%= @currentUser%></span></p>
-            <p class="navbar-text pull-right navbar-right"><%= link_to "Module's files", git_hub_filesToExport_path %> <span class="badge badge-primary"><%=FileToExport.getFilesCount%></span>
+            <p class="navbar-text pull-right navbar-right"><%= link_to "Module's files", git_hub_filesToExport_path %> <span class="badge badge-primary"><%=FileToExport.getFilesCount(session[:id])%></span>
             </p>
           </ul>
     <%else%>
