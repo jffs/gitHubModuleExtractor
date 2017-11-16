@@ -1,7 +1,7 @@
 require "pstore"
 require 'json'
 require 'builder'
-require 'FileUtils'
+require 'fileutils'
 class GitHubController < ApplicationController
  skip_before_action :verify_authenticity_token
  before_action :gitSession, :except => [:auth, :sign_in]
