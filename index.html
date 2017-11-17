@@ -44,7 +44,7 @@
 
 <p>Esta herramienta fue desarrollada utilizando <a href="http://rubyonrails.org/">Ruby on Rails</a>, un framework de aplicaciones web de código abierto escrito en el lenguaje de programación Ruby, el cual utiliza el paradigma del patrón Modelo Vista Controlador (MVC).</p>
 
-<p>La aplicación se comunica con la <a href="https://developer.github.com/v3/">API oficial de GitHub</a>  utilizando una <em>gema</em>  llamada <a href="http://piotrmurach.github.io/github/">github_api</a>. Ésta es una gema para Ruby, que da soporte a todos los métodos de la API de GitHub. Permite autenticarse contra GitHub, acceder a los repositorios, commits, etc. </p>
+<p>La aplicación se comunica con la <a href="https://developer.github.com/v3/">API oficial de GitHub</a>  utilizando una <em>gema</em>  llamada <a href="http://piotrmurach.github.io/github/">github_api</a>. Esta es una gema para Ruby, que da soporte a todos los métodos de la API de GitHub. Permite autenticarse contra GitHub, acceder a los repositorios, commits, etc. </p>
 
 <hr>
 
@@ -52,7 +52,7 @@
 
 <h2 id="flujo-de-la-aplicación">Flujo de la aplicación </h2>
 
-<p>El flujo de la aplicación consiste básicamente en que la aplicación web invoca a los métodos definidos por la librería descripta anteriormente, y ésta genera los request correspondientes a la API oficial de GitHub devolviendo la respuesta a la aplicación. Lo anterior se ve ilustrado en el diagrama de la figura 1. </p>
+<p>El flujo de la aplicación consiste básicamente en que ésta invoca a los métodos definidos por la gema, y ésta genera los request correspondientes a la API oficial de GitHub devolviendo la respuesta a la aplicación. Lo anterior se ve ilustrado en el diagrama de la figura 1. </p>
 
 <p style="text-align:center" ><img src="https://firebasestorage.googleapis.com/v0/b/gitmoduleextractor.appspot.com/o/flujo.png?alt=media&amp;token=ae74175b-d2fa-41eb-98bf-323bb80a6467" alt="flujo de la aplicación" title="" align="middle"> <br>
 <div style="text-align:center" ><strong>Figura 1.</strong> Diagrama de interacción entre la aplicación web y la API de GitHub</p></div>
@@ -63,7 +63,7 @@
 
 <p>Para poder utilizar la aplicación se deberán seguir los siguientes pasos:</p>
 
-<p>Clonar el repositorio, desde GitHub descargándolo o desde línea de comando haciendo </p>
+<p>Clonar el repositorio, desde GitHub descargándolo <a href="https://github.com/jffs/gitHubModuleExtractor"> aquí</a> o desde línea de comando haciendo </p>
 
 
 
@@ -79,7 +79,7 @@ Para crear un host, desde línea de comando se debe hacer lo siguiente: </p>
 
 <p>En donde en lugar de <em>NOMBRE_HOST</em> se colocará un nombre deseado para el host, para este ejemplo se llamará <em>git</em>. </p>
 
-<p>Luego se deben establecer las variables de entorno de la máquina virtual, ésto se hace desde linea de comando con lo siguiente </p>
+<p>Luego se deben establecer las variables de entorno de la máquina virtual, esto se hace desde linea de comando con lo siguiente </p>
 
 
 
@@ -125,11 +125,11 @@ Una vez hecho el ingreso, aparece un listado de los repositorios pertenecientes 
 <p style="text-align:center"> <img src="https://firebasestorage.googleapis.com/v0/b/gitmoduleextractor.appspot.com/o/repos.PNG?alt=media&amp;token=3b31b0ca-a552-4adc-b48d-ff1ddce8aa29" alt="listado de repositorios" title=""> <br>
 <strong>Figura 3.</strong> Listado de repositorios del usuario</p>
 
-<p>Al ingresar dentro de un archivo, figura 4, se puede seleccionar tanto el achivo entero o líneas específicas a exportar. Cuando la selección termine, se agrega la selección al módulo que luego será exportado, presionando el botón <em>Save selected lines</em> . Esta acción debe repetirse por cada archivo que se deseé procesar.  <br>
+<p>Al ingresar dentro de un archivo, figura 4, se puede seleccionar tanto el archivo entero como líneas específicas a exportar. Cuando la selección termine, se agrega la selección al módulo que luego será exportado, presionando el botón <em>Save selected lines</em> . Esta acción debe repetirse por cada archivo que se deseé procesar.  <br>
 <img src="https://firebasestorage.googleapis.com/v0/b/gitmoduleextractor.appspot.com/o/file.PNG?alt=media&amp;token=70e59ebb-f68f-4f00-bace-50034ff906eb" alt="Listado de lineas de un archivo para ser seleccionadas" title=""> <br>
 <div style="text-align:center"><strong>Figura 4.</strong> Vista del archivo seleccionado.</div></p>
 
-<p>En la parte superior derecha de la aplicación se puede ver la cantidad de archivos que componen el módulo a exportar, figura 5. Al ingresar, se presenta un listado de los archivos seleccionados anteriormente en los cuales se pueden realizar modificaciones o eliminarlos del módulo, figura 6. </p>
+<p>En la parte superior derecha de la aplicación se puede ver la cantidad de archivos que componen el módulo a exportar, figura 5. Al ingresar, se presenta un listado de los archivos seleccionados, en los cuales se pueden realizar modificaciones o eliminarlos del módulo, figura 6. </p>
 
 <p style="text-align:center"><img src="https://firebasestorage.googleapis.com/v0/b/gitmoduleextractor.appspot.com/o/moduleFiles.PNG?alt=media&amp;token=ef6cfefb-b820-4ec7-b4d2-130a0faedc0c" alt="enter image description here" title=""> <br>
 <strong>Figura 5.</strong> Barra superior de la aplicación. </p>
@@ -147,5 +147,5 @@ Una vez hecho el ingreso, aparece un listado de los repositorios pertenecientes 
 
 <hr>
 
-<p><strong>Aplicación web realizada por Fernández Sosa Juan, en el marco del trabajo final de la materia Ingeniería de Aplicaciones web de la UNLP.</strong></p></div></body>
+<p style="text-align: right;"><strong>Aplicación web realizada por Fernández Sosa Juan,<br> en el marco del trabajo final de la materia Ingeniería de Aplicaciones web de la UNLP.</strong></p></div></body>
 </html>
