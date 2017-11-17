@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hello!</title>
+<link rel="stylesheet" href="https://stackedit.io/res-min/themes/base.css" />
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body><div class="container"><h1 id="github-module-extractor">GitHub Module Extractor!</h1>
+
+
+
+<h2 id="índice">Índice</h2>
+
+<p><div class="toc">
+<ul>
+<li><a href="#github-module-extractor">GitHub Module Extractor!</a><ul>
+<li><a href="#índice">Índice</a></li>
+<li><a href="#introducción">Introducción</a></li>
+<li><a href="#tecnologías-utilizadas">Tecnologías utilizadas</a></li>
+<li><a href="#flujo-de-la-aplicación">Flujo de la aplicación </a></li>
+<li><a href="#instalación">Instalación</a></li>
+<li><a href="#manual-de-uso">Manual de uso</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</p>
+
+
+
+<h2 id="introducción">Introducción</h2>
+
+<p>Esta herramienta permite al usuario ingresar con su cuenta de GitHub y procesar sus repositorios identificando módulos o funcionalidades específicas, para poder extraerlos en formato XML. </p>
+
+<p>Básicamente permite extraer aquellos archivos y/o líneas de código que forman parte de un módulo, el cual se extrae para poder re-utilizarlo. Estas extracciones se ven reflejadas en el repositorio en forma de commits.</p>
+
+<hr>
+
+
+
+<h2 id="tecnologías-utilizadas">Tecnologías utilizadas</h2>
+
+<p>Esta herramienta fue desarrollada utilizando <a href="http://rubyonrails.org/">Ruby on Rails</a>, un framework de aplicaciones web de código abierto escrito en el lenguaje de programación Ruby, el cual utiliza el paradigma del patrón Modelo Vista Controlador (MVC).</p>
+
+<p>La aplicación se comunica con la <a href="https://developer.github.com/v3/">API oficial de GitHub</a>  utilizando una <em>gema</em>  llamada <a href="http://piotrmurach.github.io/github/">github_api</a>. Ésta es una gema para Ruby, que da soporte a todos los métodos de la API de GitHub. Permite autenticarse contra GitHub, acceder a los repositorios, commits, etc. </p>
+
+<hr>
+
+
+
+<h2 id="flujo-de-la-aplicación">Flujo de la aplicación </h2>
+
+<p>El flujo de la aplicación consiste básicamente en que la aplicación web invoca a los métodos definidos por la librería descripta anteriormente, y ésta genera los request correspondientes a la API oficial de GitHub devolviendo la respuesta a la aplicación. Lo anterior se ve ilustrado en el diagrama de la figura 1. </p>
+
+<p><img src="https://firebasestorage.googleapis.com/v0/b/gitmoduleextractor.appspot.com/o/flujo.png?alt=media&amp;token=ae74175b-d2fa-41eb-98bf-323bb80a6467" alt="flujo de la aplicación" title=""> <br>
+<strong>Figura 1.</strong> Diagrama de interacción entre la aplicación web y la API de GitHub</p>
+
+<hr>
+
+<h2 id="instalación">Instalación</h2>
+
+<p>Para poder utilizar la aplicación se deberán seguir los siguientes pasos:</p>
+
+<p>Clonar el repositorio, desde GitHub descargándolo o desde línea de comando haciendo </p>
+
+
+
+<pre class="prettyprint"><code class="language-sh hljs ruby"><span class="hljs-variable">$ </span>git clone git<span class="hljs-variable">@github</span>.<span class="hljs-symbol">com:</span>jffs/gitHubModuleExtractor.git
+<span class="hljs-variable">$ </span>cd directorio_donde_está_el_repositorio/gitHubModuleExtractor</code></pre>
+
+<p>Se utilizará <a href="https://www.docker.com/products/docker-toolbox">Docker Toolbox</a> para poder desplegar la aplicación independientemente del sistema operativo que se tenga. Una vez descargado Docker, se comenzará por crear un host para poder utilizarlo, esto se hace mediante las <em><a href="https://docs.docker.com/machine/">docker machines</a></em>, que permiten crear sistemas que pueden albergar contenedores de Docker. <br>
+Para crear un host, desde línea de comando se debe hacer lo siguiente: </p>
+
+
+
+<pre class="prettyprint"><code class="language-sh hljs livecodeserver">$ docker-machine <span class="hljs-built_in">create</span> <span class="hljs-comment">--device virtualbox NOMBRE_HOST</span></code></pre>
+
+<p>En donde en lugar de <em>NOMBRE_HOST</em> se colocará un nombre deseado para el host, para este ejemplo se llamará <em>git</em>. </p>
+
+<p>Luego se deben establecer las variables de entorno de la máquina virtual, ésto se hace desde linea de comando con lo siguiente </p>
+
+
+
+<pre class="prettyprint"><code class="language-sh hljs bash">$ <span class="hljs-built_in">eval</span> <span class="hljs-string">"<span class="hljs-variable">$(docker-machine env git)</span>"</span> </code></pre>
+
+<p>Una vez creada la máquina virtual, se puede acceder a ella con el comando</p>
+
+
+
+<pre class="prettyprint"><code class="language-sh hljs ruby"><span class="hljs-variable">$ </span>docker-machine start git</code></pre>
+
+<p>Al ejecutar la aplicación web de forma local, se debe conocer la IP de la docker machine que se creó anteriormente.</p>
+
+
+
+<pre class="prettyprint"><code class="language-sh hljs ruby"><span class="hljs-variable">$ </span>docker-machine ip git</code></pre>
+
+<p>Para poder compilar el proyecto e instalar todas las dependencias (gemas) se utilizará <a href="https://docs.docker.com/compose/">docker-compose</a> </p>
+
+
+
+<pre class="prettyprint"><code class="language-sh hljs ruby"><span class="hljs-variable">$ </span>docker-compose build </code></pre>
+
+<p>Finalmente se ejecutará la aplicación con el comando </p>
+
+
+
+<pre class="prettyprint"><code class="language-sh hljs ruby"><span class="hljs-variable">$ </span>docker-compose up </code></pre>
+
+<p>La aplicación estará disponible desde la IP de la docker machine obtenida anteriormente, en el puerto 3001 (definido asi en el archivo docker-compose.yml). El resultado se muestra en la figura 2. </p>
+
+<p><img src="https://firebasestorage.googleapis.com/v0/b/gitmoduleextractor.appspot.com/o/inicio.PNG?alt=media&amp;token=b8d744c4-d7d9-4660-a087-acf1c839e3d1" alt="home page " title=""> <br>
+                            <strong>Figura 2.</strong> Home page de la aplicación </p>
+
+<hr>
+
+
+
+<h2 id="manual-de-uso">Manual de uso</h2>
+
+<p>El primer paso para poder utilizar la aplicación es loguearse con las credenciales de GitHub. <br>
+Una vez hecho el ingreso, aparece un listado de los repositorios pertenecientes al usuario logueado, figura 3. Navegando por cada repositorio, se accede a los directorios y archivos que lo componen.  <br>
+<img src="https://firebasestorage.googleapis.com/v0/b/gitmoduleextractor.appspot.com/o/repos.PNG?alt=media&amp;token=3b31b0ca-a552-4adc-b48d-ff1ddce8aa29" alt="listado de repositorios" title=""> <br>
+<strong>Figura 3.</strong> Listado de repositorios del usuario</p>
+
+<p>Al ingresar dentro de un archivo, figura 4, se puede seleccionar tanto el achivo entero o líneas específicas a exportar. Cuando la selección termine, se agrega la selección al módulo que luego será exportado, presionando el botón <em>Save selected lines</em> . Esta acción debe repetirse por cada archivo que se deseé procesar.  <br>
+<img src="https://firebasestorage.googleapis.com/v0/b/gitmoduleextractor.appspot.com/o/file.PNG?alt=media&amp;token=70e59ebb-f68f-4f00-bace-50034ff906eb" alt="Listado de lineas de un archivo para ser seleccionadas" title=""> <br>
+<strong>Figura 4.</strong> Vista del archivo seleccionado.</p>
+
+<p>En la parte superior derecha de la aplicación se puede ver la cantidad de archivos que componen el módulo a exportar, figura 5. Al ingresar, se presenta un listado de los archivos seleccionados anteriormente en los cuales se pueden realizar modificaciones o eliminarlos del módulo, figura 6. </p>
+
+<p><img src="https://firebasestorage.googleapis.com/v0/b/gitmoduleextractor.appspot.com/o/moduleFiles.PNG?alt=media&amp;token=ef6cfefb-b820-4ec7-b4d2-130a0faedc0c" alt="enter image description here" title=""> <br>
+<strong>Figura 5.</strong> Barra superior de la aplicación. </p>
+
+<p><img src="https://firebasestorage.googleapis.com/v0/b/gitmoduleextractor.appspot.com/o/module.PNG?alt=media&amp;token=0422d4cd-8f43-4164-9d09-7490fe5aa0d2" alt="panel de módulo" title=""> <br>
+<strong>Figura 6</strong>. Panel del componente a exportar, se puede ver el listado de archivos que lo componen. </p>
+
+<p>Para generar el módulo nuevo, se debe presionar el boton <em>Create module</em> el cual generará un archivo en formato XML con los archivos y lineas seleccionadas, figura 7, y a su vez producirá un commit en GitHub eliminando esos archivos y lineas. Se generará un commit por cada archivo modificado/eliminado. </p>
+
+<p><img src="https://firebasestorage.googleapis.com/v0/b/gitmoduleextractor.appspot.com/o/xml.PNG?alt=media&amp;token=4599b279-45d6-425b-8ce9-eb3de63610c9" alt="formato xml del módulo" title=""> <br>
+<strong>Figura 7.</strong> Módulo exportado en formato XML. </p>
+
+<hr>
+
+<p><strong>Aplicación web realizada por Fernández Sosa Juan, en el marco del trabajo final de la materia Ingeniería de Aplicaciones web de la UNLP.</strong></p></div></body>
+</html>
