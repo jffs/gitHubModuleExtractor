@@ -28,13 +28,11 @@
 </div>
 </p>
 
-
-
 <h2 id="introducción">Introducción</h2>
 
 <p>Esta herramienta permite al usuario ingresar con su cuenta de GitHub y procesar sus repositorios identificando módulos o funcionalidades específicas, para poder extraerlos en formato XML. </p>
 
-<p>Básicamente permite extraer aquellos archivos y/o líneas de código que forman parte de un módulo, el cual se extrae para poder re-utilizarlo. Estas extracciones se ven reflejadas en el repositorio en forma de commits.</p>
+<p>Básicamente, el objetivo de la herramienta es mejorar la modularización. Para ello, la herramienta permite separar funcionalidades que pertenecen a diferentes módulos, permitiendo seleccionar de diferentes archivos, líneas de código que forman parte de estos. Las líneas seleccionadas, se separan luego del archivo original generando un nuevo commit en el cual se reflejan estos cambios.</p>
 
 <hr>
 
@@ -140,10 +138,14 @@ Una vez hecho el ingreso, aparece un listado de los repositorios pertenecientes 
 <strong>Figura 6</strong>. Panel del componente a exportar, se puede ver el listado de archivos que lo componen. </p>
 <br>
 <br>
-<p>Para generar el módulo nuevo, se debe presionar el boton <em>Create module</em> el cual generará un archivo en formato XML con los archivos y lineas seleccionadas, figura 7, y a su vez producirá un commit en GitHub eliminando esos archivos y lineas. Se generará un commit por cada archivo modificado/eliminado. </p>
+<p>Para generar el módulo nuevo, se debe presionar el boton <em>Create module</em> el cual generará un archivo en formato XML con los archivos y lineas seleccionadas, figura 7. A su vez, se producirá un nuevo commit en GitHub reflejando las modificaciones bajo la leyenda <em>Update File</em> o <em>Delete File</em> según corresponda. Se generará un commit por cada archivo modificado/eliminado. Siguiendo el ejemplo descripto a lo largo de este texto, ésto último se puede ver en la figura 8. </p>
 
 <p style="text-align:center"><img src="https://firebasestorage.googleapis.com/v0/b/gitmoduleextractor.appspot.com/o/xml.PNG?alt=media&amp;token=4599b279-45d6-425b-8ce9-eb3de63610c9" alt="formato xml del módulo" title=""> <br>
 <strong>Figura 7.</strong> Módulo exportado en formato XML. </p>
+<br/>
+<p style="text-align:center"><img src="https://firebasestorage.googleapis.com/v0/b/gitmoduleextractor.appspot.com/o/commit.png?alt=media&token=b49a24b4-b930-47bb-920c-f50a35e2d397" alt="Commit generado" title=""> <br>
+<strong>Figura 8.</strong> Commit generado al extraer las lineas seleccionadas. </p>
+
 
 <hr>
 
